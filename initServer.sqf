@@ -29,6 +29,7 @@ RPG_local = [];
 //-FIND STARTING LOCATION
 RPG_startLoc = (selectRandom RPG_villages);
 publicVariable "RPG_startLoc";
+systemChat format["StartLoc: %1",RPG_startLoc];
 RPG_serverReady = true;
 publicVariable "RPG_serverReady";
 //-----------------------------------
