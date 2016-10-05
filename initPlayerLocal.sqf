@@ -21,7 +21,7 @@ waitUntil {RPG_serverReady isEqualTo true};
 private ["_spawned","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_spawnPos"];
 _spawned = false;
 _spawnableHouses = [];
-_houseList = (RPG_startLoc select 1) nearObjects ["Building",(RPG_startLoc select 2)];
+_houseList = nearestObjects [(RPG_startLoc select 1), ["building"], (RPG_startLoc select 2)];
 if ((count _houseList) > 0) then {
 	{		
 		_buildingPos = _x buildingPos -1;
