@@ -1,0 +1,38 @@
+onLoadName = "A3DRPG";
+OnLoadMission = "Who will you be?";
+dev = "Sinbane";
+author = "Sinbane";
+//briefingName = "briefingname";
+overviewText = "";
+//overviewPicture = "\a3\Missions_F_Beta\data\img\showcase_commanding_I_overview_ca.paa";
+overviewPicture = "";
+LoadScreen = "";
+
+class Header
+{
+ gameType = Coop ;            //DM, Team, Coop, ...
+ minPlayers = 1;             //min # of players the mission supports
+ maxPlayers = 4;            //Max # of players the mission supports
+};
+
+respawnButton = 0;
+respawn = 0;
+respawnDialog = 0;
+respawnDelay = 999999;
+respawnTemplates[] = {""};
+disabledAI = 1;
+//0 = Global 1 = Side 2 = Command 3 = Group 4 = Vehicle 5 = Direct 6 = System
+disableChannels[] = {{0, true, true},{2, true, true},{6, true, true}};
+joinUnassigned = 1;
+enableDebugConsole = 1;
+
+#include "params.hpp"
+#include "CfgMaster.hpp"
+#include "sounds.hpp"
+#include "debriefing.hpp"
+#include "GUI\defines.hpp"
+#include "SINadmin\SIN_admin.hpp"
+
+class CfgFunctions {
+    #include "Functions.hpp"
+};
