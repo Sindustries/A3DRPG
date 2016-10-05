@@ -44,7 +44,7 @@ if ((count _houseList) > 0) then {
 	};
 };
 if (!_spawned) then {
-	_spawnPos = [(RPG_startLoc select 1),0,(RPG_startLoc select 2)] call RPG_fnc_findPos;
+	_spawnPos = [(RPG_startLoc select 1),0,((RPG_startLoc select 2) select 0)] call RPG_fnc_findPos;
 	player setPos _spawnPos;
 	_spawned = true;
 };
