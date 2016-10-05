@@ -29,7 +29,7 @@ RPG_local = [];
 		RPG_local pushBack [(text _x),(locationPosition _x),(size _x)];
 	};
 } forEach nearestLocations [[0,0,0], ["NameCity","NameCityCapital","NameLocal","NameMarine","NameVillage"], 100000];
-diag_log "-- LOCATIONS FOUND --"
+diag_log "-- LOCATIONS FOUND --";
 //-----------------------------------
 //-FIND STARTING LOCATION
 RPG_startLoc = (selectRandom RPG_villages);
