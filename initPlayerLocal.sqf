@@ -16,12 +16,6 @@ diag_log "----------------------------------------------------------------------
 diag_log "---------------------------------------- A3DRPG CLIENT INIT ----------------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
 //-----------------------------------
-RPG_tier1Housing = ["Land_i_House_Small_03_V1_F","Land_i_House_Small_02_V3_F","Land_i_House_Small_02_V1_F","Land_i_House_Small_02_V2_F","Land_i_House_Small_01_V3_F","Land_i_House_Small_01_V1_F","Land_i_House_Small_01_V2_F"];
-RPG_tier2Housing = ["Land_i_Stone_HouseSmall_V3_F","Land_i_Stone_HouseSmall_V1_F","Land_i_House_Big_02_V3_F","Land_i_House_Big_02_V1_F","Land_i_House_Big_02_V2_F"];
-RPG_tier3Housing = ["Land_i_House_Big_01_V3_F","Land_i_House_Big_01_V1_F","Land_i_House_Big_01_V2_F"];
-RPG_militaryHousing = ["Land_i_Barracks_V1_F","Land_i_Barracks_V2_F","Land_u_Barracks_V2_F"];
-RPG_shopBuildings = ["Land_i_Shop_02_V3_F","Land_i_Shop_02_V1_F","Land_i_Shop_02_V2_F","Land_i_Shop_01_V3_F","Land_i_Shop_01_V1_F","Land_i_Shop_01_V2_F"];
-//-----------------------------------
 RPG_safehouses = [];
 RPG_clientMarkers = [];
 //-----------------------------------
@@ -31,14 +25,20 @@ setDate [2155, 7, 4, 7, 0];
 waitUntil {RPG_serverReady isEqualTo true};
 diag_log "-- SERVER READY, PREPARING.. --"; 
 //-----------------------------------
-//-SPAWN PLAYER
+//-CLASS SELECTOR
 spawnChosen = false;
 while {!spawnChosen} do {
 	[] call RPG_fnc_startupMenu;
 	waitUntil {dialog};
 	waitUntil {!dialog};
 };
+spawnChosen = nil;
 diag_log "-- PLAYER SPAWNED --";
+//-----------------------------------
+private "_keyHandler";
+_keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", "
+	[_this select 0,_this select 1,_this select 2,_this select 3,_this select 4] call RPG_fnc_keyHandler;
+"];
 //-----------------------------------
 //enableSaving [false, true];
 enableEnvironment true;
