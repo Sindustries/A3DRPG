@@ -14,6 +14,12 @@ class RPG_Core {
 		class getVehicles {};
 	};
 	
+	class startup {
+		file = "core\startup";
+		class startupMenu {};
+		class startupMenuUpdate {};
+	}
+	
 	class prologue {
 		file = "core\prologue";
 		class prologueBegin {};

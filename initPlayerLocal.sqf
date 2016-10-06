@@ -39,11 +39,11 @@ private ["_spawned","_location","_spawnableHouses","_houseList","_buildingPos","
 _spawned = false;
 _location = (selectRandom RPG_villages);
 _spawnableHouses = [];
-_houseList = nearestObjects [(_location select 1), ["building"], ((_location select 2) select 0)];
+_houseList = nearestObjects [(_location select 1), ["house"], ((_location select 2) select 0)];
 if ((count _houseList) > 0) then {
 	{		
 		_buildingPos = _x buildingPos -1;
-		if ((count _buildingPos) > 0) then {
+		if ((count _buildingPos) >= 2) then {
 			_spawnableHouses pushBack _x;
 		};	
 	} forEach _houseList;
@@ -66,15 +66,9 @@ if (!_spawned) then {
 	player setPos _spawnPos;
 	_spawned = true;
 };
+player setDir (getDir _crate);
 [_crate] call RPG_fnc_emptyVeh;
-_crate addWeaponCargoGlobal ["arifle_CTAR_blk_F",1];
-_crate addWeaponCargoGlobal ["OPTRE_M6G",1];
-_crate additemCargoGlobal ["OPTRE_M6G_Flashlight",1];
-_crate addMagazineCargoGlobal ["30Rnd_580x42_Mag_Tracer_F",2];
-_crate addMagazineCargoGlobal ["OPTRE_8Rnd_127x40_Mag",3];
-_crate addBackpackCargoGlobal ["B_TacticalPack_blk",1];
-_crate addItemCargoGlobal ["OPTRE_Biofoam",3];
-_crate addItemCargoGlobal ["OPTRE_Glasses_Cigar",1];
+[_crate] call RPG_fnc_startupMenu;
 diag_log "-- PLAYER SPAWNED --";
 diag_log format["-- SPAWN LOCATION: %1 --",(_location select 0)];
 //-----------------------------------

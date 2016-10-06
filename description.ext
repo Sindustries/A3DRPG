@@ -22,9 +22,12 @@ respawnDelay = 999999;
 respawnTemplates[] = {""};
 disabledAI = 1;
 //0 = Global 1 = Side 2 = Command 3 = Group 4 = Vehicle 5 = Direct 6 = System
-disableChannels[] = {{0, true, true},{2, true, true},{6, true, true}};
+disableChannels[] = {{0, true, false},{2, true, false},{6, true, false}};
 joinUnassigned = 1;
 enableDebugConsole = 1;
+
+#include "GUI\defines.hpp"
+#include "GUI\startup.hpp"
 
 class CfgFunctions {
     #include "Functions.hpp"
