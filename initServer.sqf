@@ -57,11 +57,13 @@ RPG_tier1Housing = ["Land_i_House_Small_03_V1_F","Land_i_House_Small_02_V3_F","L
 RPG_tier2Housing = ["Land_i_Stone_HouseSmall_V3_F","Land_i_Stone_HouseSmall_V1_F","Land_i_House_Big_02_V3_F","Land_i_House_Big_02_V1_F","Land_i_House_Big_02_V2_F"];
 RPG_tier3Housing = ["Land_i_House_Big_01_V3_F","Land_i_House_Big_01_V1_F","Land_i_House_Big_01_V2_F"];
 RPG_militaryHousing = ["Land_i_Barracks_V1_F","Land_i_Barracks_V2_F","Land_u_Barracks_V2_F"];
+RPG_CPDbuildings = ["Land_Offices_01_V1_F"];
 RPG_shopBuildings = ["Land_i_Shop_02_V3_F","Land_i_Shop_02_V1_F","Land_i_Shop_02_V2_F","Land_i_Shop_01_V3_F","Land_i_Shop_01_V1_F","Land_i_Shop_01_V2_F"];
 publicVariable "RPG_tier1Housing";
 publicVariable "RPG_tier2Housing";
 publicVariable "RPG_tier3Housing";
 publicVariable "RPG_militaryHousing";
+publicVariable "RPG_CPDbuildings";
 publicVariable "RPG_shopBuildings";
 diag_log "-- COMPLETE --";
 //-----------------------------------
@@ -72,6 +74,3 @@ diag_log "----------------------------------------------------------------------
 diag_log "----------------------------------- A3DRPG SERVER INIT COMPLETE  -----------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
 //-----------------------------------
-/*
-[[Location NameLocal at 13064, 10701,"Recon Tower S08"],[Location NameVillage at 8146, 8914,"Habitat V07"],[Location NameVillage at 12925, 14195,"Colony Arthur"],[Location NameLocal at 10311, 6408,"Recon Tower S09"],[Location NameLocal at 6806, 11556,"Recon Tower S01"],[Location NameVillage at 16026, 9882,"Habitat V01"],[Location NameLocal at 7437, 7513,"Recon Tower S03"],[Location NameLocal at 14622, 6788,"Atmosphere Cleaner"],[Location NameLocal at 10349, 4492,"Recon Tower S07"],[Location NameLocal at 17445, 11586,"Monolith Dig Site"],[Location NameLocal at 5399, 8083,"Atmosphere Cleaner"],[Location NameLocal at 8114, 16929,"Atmosphere Cleaner"],[Location NameLocal at 4071, 10994,"Skyfarm B02"],[Location NameLocal at 16107, 4296,"Recon Tower S10"],[Location NameLocal at 4007, 13305,"Air Cleaner M03"],[Location NameLocal at 13549, 2624,"Air Cleaner M02"],[Location NameLocal at 18213, 15414,"Recon Tower S05"],[Location NameLocal at 19447, 7060,"Atmosphere Cleaner"],[Location NameVillage at 13235, 1818,"Colony Andrew"],[Location NameVillage at 16873, 17406,"Habitat V06"],[Location NameLocal at 8787, 19028,"Air Cleaner M05"],[Location NameVillage at 10197, 1533,"Habitat V04"],[Location NameLocal at 15472, 18936,"Research Station Pegasus"],[Location NameLocal at 1759, 9905,"Recon Tower S04"],[Location NameLocal at 1710, 13159,"Atmosphere Cleaner"],[Location NameLocal at 2319, 6067,"Recon Outpost S07"],[Location NameLocal at 6032, 1230,"Recon Tower S06"],[Location NameLocal at 18906, 19212,"Air Cleaner M04"],[Location NameVillage at 2407, 17884,"Habitat V02"]]
-*/
