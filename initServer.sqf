@@ -46,6 +46,9 @@ RPG_local = [];
 		RPG_local pushBack [(text _x),(locationPosition _x),(size _x)];
 	};
 } forEach nearestLocations [[0,0,0], ["NameCity","NameCityCapital","NameLocal","NameMarine","NameVillage"], 100000];
+publicVariable "RPG_cities";
+publicVariable "RPG_villages";
+publicVariable "RPG_local";
 diag_log "-- LOCATIONS FOUND --";
 //-----------------------------------
 //-FIND STARTING LOCATION
