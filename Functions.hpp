@@ -10,6 +10,13 @@ class RPG_Core {
 	
 	class functions {
 		file = "core\functions";
+		class emptyVeh {};
+		class getVehicles {};
+	};
+	
+	class prologue {
+		file = "core\prologue";
+		class prologueBegin {};
 	};
 }
 	
