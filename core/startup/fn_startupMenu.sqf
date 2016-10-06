@@ -61,73 +61,51 @@ _Class8 = _display displayCtrl Class8;
 //-----------------------------------
 _Btn1 buttonSetAction "[1,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
 _Class1 ctrlSetStructuredText parseText "
-<t align='center' size='2.2'>UNSC MARINE</t><br/>
-<br/>
+<t align='center' size='1.2'>UNSC MARINE</t><br/>
+<br/><t size='0.5'>
 Credits: ₵1000<br/>
 Weapon: MA5B ICWS Assault Rifle<br/>
-<br/>
-<t size='1.5'>RELATIONSHIPS</t><br/>
-Insurrectionists - ENEMY<br/>
-Colonial Police - NEUTRAL		
+</t><br/>
+<t size='0.8'>RELATIONSHIPS</t><br/>
+<t size='0.5'>Insurrectionists - ENEMY<br/>
+Colonial Police - NEUTRAL</t>
 ";
 //-----------------------------------
 _Btn2 buttonSetAction "[2,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
 _Class2 ctrlSetStructuredText parseText "
-<t align='center' size='2.2'>INSURRECTIONIST</t><br/>
-<br/>
+<t align='center' size='1.2'>INSURRECTIONIST</t><br/>
+<br/><t size='0.5'>
 Credits: ₵500<br/>
 Weapon: M45 Tactical Shotgun<br/>
-<br/>
-<t size='1.5'>RELATIONSHIPS</t><br/>
-UNSC - ENEMY<br/>
-Colonial Police - NEUTRAL		
+</t><br/>
+<t size='0.8'>RELATIONSHIPS</t><br/>
+<t size='0.5'>UNSC - ENEMY<br/>
+Colonial Police - NEUTRAL</t>
 ";
 //-----------------------------------
 _Btn3 buttonSetAction "[3,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
 _Class3 ctrlSetStructuredText parseText "
-<t align='center' size='2.2'>MERCENARY</t><br/>
-<br/>
+<t align='center' size='1.2'>MERCENARY</t><br/>
+<br/><t size='0.5'>
 Credits: ₵2500<br/>
 Weapon: M7 SMG<br/>
-<br/>
-<t size='1.5'>RELATIONSHIPS</t><br/>
-UNSC - NEUTRAL<br/>
+</t><br/>
+<t size='0.8'>RELATIONSHIPS</t><br/>
+<t size='0.5'>UNSC - NEUTRAL<br/>
 Insurrectionists - NEUTRAL<br/>
-Colonial Police - NEUTRAL		
+Colonial Police - NEUTRAL</t>	
 ";
 //-----------------------------------
 _Btn4 buttonSetAction "[4,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
 _Class4 ctrlSetStructuredText parseText "
-<t align='center' size='2.2'>CIVILIAN</t><br/>
+<t align='center' size='1.2'>CIVILIAN</t><br/>
 <br/>
 Credits: ₵100<br/>
 Weapon: NONE<br/>
 <br/>
-<t size='1.5'>RELATIONSHIPS</t><br/>
-UNSC - NEUTRAL<br/>
+<t size='0.8'>RELATIONSHIPS</t><br/>
+<t size='0.5'>UNSC - NEUTRAL<br/>
 Insurrectionists - NEUTRAL<br/>
-Colonial Police - NEUTRAL		
+Colonial Police - NEUTRAL</t>
 ";
 //-----------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

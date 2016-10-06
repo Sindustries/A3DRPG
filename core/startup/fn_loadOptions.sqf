@@ -18,8 +18,7 @@ switch {_option} do {
 		player addUniform "OPTRE_UNSC_Marine_Uniform";
 		player addVest "OPTRE_UNSC_Marine_Vest";
 		player addHeadgear "OPTRE_UNSC_Marine_Helmet_Vacuum";
-		_backpack = "";	
-		_glasses = "OPTRE_HUD_w_Glasses";
+		player addGoggles "OPTRE_HUD_w_Glasses";
 	};
 	case 2: {
 		
@@ -37,17 +36,17 @@ player linkItem "itemWatch";
 player linkItem "itemCompass";
 if ((count _weapons) > 0) then {
 	{
-		_crate addWeaponCargoGlobal _x;
+		_crate addWeaponCargoGlobal [(_x select 0),(_x select 1)];
 	} forEach _weapons;
 };
 if ((count _magazines) > 0) then {
 	{
-		_crate addMagazineCargoGlobal _x;
+		_crate addMagazineCargoGlobal [(_x select 0),(_x select 1)];
 	} forEach _magazines;
 };
 if ((count _items) > 0) then {
 	{
-		_crate addItemCargoGlobal _x;
+		_crate addItemCargoGlobal [(_x select 0),(_x select 1)];
 	} forEach _items;
 };
 //-----------------------------------
