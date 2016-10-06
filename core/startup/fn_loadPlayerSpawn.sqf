@@ -120,7 +120,6 @@ if (!_spawned) then {
 	_spawncar setPos _carpos;
 	_spawncar setDir (random 360);
 	[_spawncar] call RPG_fnc_emptyVeh;
-	};
 };
 [_crate] call RPG_fnc_emptyVeh;
 _grp = createGroup _side;
