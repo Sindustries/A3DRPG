@@ -19,7 +19,6 @@ class RPG_Core {
 		class loadOptions {};
 		class loadPlayerSpawn {};
 		class startupMenu {};
-		class startupMenuUpdate {};
 	}
 	
 	class prologue {
