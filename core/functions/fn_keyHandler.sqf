@@ -14,8 +14,7 @@ _ctrl = _this select 3;
 _alt = _this select 4;
 _handled = false;
 //-----------------------------------
-hint format["%1 keyPress detected!",_code];
-switch {_code} do {
+switch (_code) do {
 	//Y-menu
 	/*case 21: {
 		COMING SOON ™
