@@ -57,7 +57,7 @@ _Class8 = _display displayCtrl Class8;
 	_x ctrlSetTooltip "Not available yet";
 } forEach [_Btn5,_Btn6,_Btn7,_Btn8];
 {
-	_x ctrlSetStructuredText parseText "COMING SOON";
+	_x ctrlSetStructuredText parseText "<t align='center'>COMING SOON</t>";
 } forEach [_Class5,_Class6,_Class7,_Class8];
 //-----------------------------------
 _Btn1 buttonSetAction "[1] call RPG_fnc_loadPlayerSpawn;";
