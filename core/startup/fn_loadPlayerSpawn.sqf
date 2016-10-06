@@ -81,8 +81,6 @@ _spawned = false;
 _spawnableHouses = [];
 if (!(isNil "_locale")) then {
 	_location = (selectRandom _locale);
-};
-if (_option isEqualTo 3 || _option isEqualTo 4) then {
 	_houseList = nearestObjects [(_location select 1), _housing, ((_location select 2) select 0)];
 } else {
 	_houseList = nearestObjects [(getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition")), _housing, 50000];
@@ -95,17 +93,22 @@ if ((count _houseList) > 0) then {
 		};	
 	} forEach _houseList;
 	if ((count _spawnableHouses) > 0) then {
-		private ["_playerPosFound","_markerName","_marker"];
+		private ["_playerPosFound","_markerName","_marker","_posFound"];
 		_playerPosFound = false;
 		_house = selectRandom _spawnableHouses;
 		_housePos = _house buildingPos -1;
-		_cratePos = selectRandom _housePos;
+		_posFound = false;
 		_crate = _container createVehicle [0,0,0];
-		_crate setPos _cratePos;
-		_housePos = _housePos - _cratePos;
+		while {!_posFound} do {
+			_cratePos = selectRandom _housePos;
+			_crate setPos _cratePos;
+			if ((getPosATL _crate select 2) < 6) then {
+				_posFound = true;
+				_housePos = _housePos - _cratePos;
+			};
+		};
 		while {!_playerPosFound} do {
 			_spawnPos = selectRandom _housePos;
-			_spawnPos = _house buildingExit 0;
 			_markerName = format["House %1",(getPos _house)];
 			_marker = createMarkerLocal [_markerName, (getPos _house)];
 			_marker setMarkerShapeLocal "ICON";
