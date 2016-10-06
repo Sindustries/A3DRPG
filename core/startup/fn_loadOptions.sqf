@@ -102,7 +102,7 @@ if (_option isEqualTo 5) then {
 	player addGoggles "G_Aviator";
 	player setVariable ["RPG_credits",10000,true];
 	_weapons = [["SMG_05_F",1],["hgun_Rook40_F",1]];
-	_magazines = [["30Rnd_9x21_Mag_SMG_02",4]];
+	_magazines = [["30Rnd_9x21_Mag_SMG_02",3],["16Rnd_9x21_Mag",3]];
 	_items = [
 		["OPTRE_v_Ins_vest",1],
 		["OPTRE_Biofoam",1],
