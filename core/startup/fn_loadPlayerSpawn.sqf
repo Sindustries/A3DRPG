@@ -33,7 +33,7 @@ _Btn8 = _display displayCtrl Btn8;
 } forEach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
 
 //-----------------------------------
-private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_car","_spawnPos","_crate","_cratePos"];
+private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_car","_spawnPos","_crate","_cratePos","_carPosFound","_add","_nearRoads","_road","_connectedRoads","_dir","_spawncar"];
 //-----------------------------------
 _option = _this select 0;
 //-----------------------------------
@@ -93,7 +93,6 @@ if ((count _houseList) > 0) then {
 			_playerPosFound = true;
 		};
 		_spawned = true;
-		private ["_carPosFound","_add","_nearRoads","_road","_connectedRoads","_dir","_spawncar"];
 		_carPosFound = false;
 		_add = 20;
 		while {!_carPosFound} do {
