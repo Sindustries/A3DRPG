@@ -14,7 +14,24 @@ diag_log "----------------------------------------------------------------------
 diag_log "---------------------------------------- A3DRPG SERVER INIT ----------------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
 //-----------------------------------
+//-FILL VEHICLE ARRAYS
+diag_log "-- FINDING ALL VEHICLES --";
+UNSC_landVehicles = ["Land","OPTRE_UNSC"] call RPG_fnc_getVehicles;
+UNSC_airVehicles = ["Air","OPTRE_UNSC"] call RPG_fnc_getVehicles;
+UNSC_seaVehicles = ["Sea","OPTRE_UNSC"] call RPG_fnc_getVehicles;
+INS_landVehicles = ["Land","OPTRE_Ins"] call RPG_fnc_getVehicles;
+INS_airVehicles = ["Air","OPTRE_Ins"] call RPG_fnc_getVehicles;
+INS_seaVehicles = ["Sea","OPTRE_Ins"] call RPG_fnc_getVehicles;
+CIV_landVehicles = ["Land","OPTRE_UEG_Civ"] call RPG_fnc_getVehicles;
+CIV_airVehicles = ["Air","OPTRE_UEG_Civ"] call RPG_fnc_getVehicles;
+CIV_seaVehicles = ["Sea","OPTRE_UEG_Civ"] call RPG_fnc_getVehicles;
+PD_landVehicles = ["Land","OPTRE_PD"] call RPG_fnc_getVehicles;
+PD_airVehicles = ["Air","OPTRE_PD"] call RPG_fnc_getVehicles;
+PD_seaVehicles = ["Sea","OPTRE_PD"] call RPG_fnc_getVehicles;
+diag_log "-- VEHICLES FOUND --";
+//-----------------------------------
 //-FIND LOCATIONS
+diag_log "-- FINDING LOCATIONS.. --";
 RPG_cities = [];
 RPG_villages = [];
 RPG_local = [];
@@ -32,9 +49,6 @@ RPG_local = [];
 diag_log "-- LOCATIONS FOUND --";
 //-----------------------------------
 //-FIND STARTING LOCATION
-RPG_startLoc = (selectRandom RPG_villages);
-publicVariable "RPG_startLoc";
-diag_log format["STARTING LOCATION: %1",RPG_startLoc];
 RPG_serverReady = true;
 publicVariable "RPG_serverReady";
 //-----------------------------------
