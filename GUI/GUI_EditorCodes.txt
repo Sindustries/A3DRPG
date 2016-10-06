@@ -30,3 +30,17 @@ $[
 	[1107,"RPG_mainStrText8",[1,"",["0.649531 * safezoneW + safezoneX","0.456 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
 ]
 */
+
+/* #Mecaty
+$[
+	1.063,
+	["RPG_atm",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[2200,"RPG_atmBG",[1,"",["0.345312 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.12375 * safezoneW","0.308 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1800,"RPG_atmMainFRM",[1,"",["0.345312 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.12375 * safezoneW","0.308 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1100,"RPG_atmStrcText01",[1,"",["0.355625 * safezoneW + safezoneX","0.324 * safezoneH + safezoneY","0.103125 * safezoneW","0.176 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"RPG_atmWithdrawBTN",[1,"WITHDRAW",["0.360781 * safezoneW + safezoneX","0.555 * safezoneH + safezoneY","0.0928125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"RPG_atmDepositBTN",[1,"DEPOSIT",["0.360781 * safezoneW + safezoneX","0.588 * safezoneH + safezoneY","0.0928125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1400,"RPG_atmInputBOX",[1,"4591345",["0.360781 * safezoneW + safezoneX","0.511 * safezoneH + safezoneY","0.0928125 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+
