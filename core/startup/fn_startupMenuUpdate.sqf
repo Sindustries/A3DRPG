@@ -20,7 +20,7 @@ _desc = _display displayCtrl Description1;
 
 _Btn1 ctrlEnable false;
 
-switch {lbCurSel 12224} do {
+switch {lbCurSel Choice1} do {
 	case 0: {
 		_desc ctrlSetText parseText format["
 		<t align='center' size='2.2'>UNSC MARINE</t><br/>
@@ -52,7 +52,7 @@ switch {lbCurSel 12224} do {
 		Credits: ₵2500<br/>
 		Weapon: M7 SMG<br/>
 		<br/>
-		<t size='1.5'>REALATIONSHIPS</t><br/>
+		<t size='1.5'>RELATIONSHIPS</t><br/>
 		UNSC - NEUTRAL<br/>
 		Insurrectionists - NEUTRAL<br/>
 		Colonial Police - NEUTRAL		

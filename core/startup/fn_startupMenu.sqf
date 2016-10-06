@@ -12,7 +12,7 @@
 private["_crate","_display","_Btn1","_choices","_desc"];
 disableSerialization;
 
-_crate = _this select 0;
+varCrate = _this select 0;
 
 if (!dialog) then {
     createDialog "RPG_startup";
@@ -30,12 +30,4 @@ _desc = _display displayCtrl Description1;
 
 lbSetCurSel [12224, 0];
 
-_Btn1 buttonSetAction "[lbCurSel 12224,_crate] call RPG_fnc_loadOptions; closeDialog 0;";
-
-[] spawn {
-	_sel = lbCurSel 12224;
-	while {dialog} do {
-		waitUntil {lbCurSel 12224 != _sel};
-		[] call RPG_fnc_startupMenuUpdate;
-	};
-};
+_Btn1 buttonSetAction "[lbCurSel 12224,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
