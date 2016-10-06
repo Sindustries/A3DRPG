@@ -61,13 +61,13 @@ _Class8 = _display displayCtrl Class8;
 //-----------------------------------
 _Btn1 buttonSetAction "[1,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
 _Class1 ctrlSetStructuredText parseText "
-<t align='center' size='1.2'>UNSC MARINE</t><br/>
-<br/><t size='0.5'>
+<t align='center'>UNSC MARINE</t><br/>
+<br/><t size='0.8'>
 Credits: ₵1000<br/>
 Weapon: MA5B ICWS Assault Rifle<br/>
 </t><br/>
-<t size='0.8'>RELATIONSHIPS</t><br/>
-<t size='0.5'>Insurrectionists - ENEMY<br/>
+<t size='0.9'>RELATIONSHIPS</t><br/>
+<t size='0.8'>Insurrectionists - ENEMY<br/>
 Colonial Police - NEUTRAL</t>
 ";
 //-----------------------------------
