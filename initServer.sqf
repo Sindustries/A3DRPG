@@ -6,7 +6,7 @@
 //-----------------------------------
 RPG_version = "0.0.0-alpha";
 publicVariable "RPG_version";
-setTimeMultiplier 0;
+setTimeMultiplier 1;
 RPG_serverReady = false;
 publicVariable "RPG_serverReady";
 //-----------------------------------

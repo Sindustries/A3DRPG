@@ -10,14 +10,17 @@ private ["_option","_crate","_weapons","_magazines","_items","_uniform","_vest",
 _option = _this select 0;
 _crate = _this select 1;
 
+player addUniform "U_BG_Guerilla2_1";
+player addHeadgear "H_Cap_blk_CMMG";
+
 if (_option isEqualTo 1) then {
 	_weapons = [["OPTRE_MA5B",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_60Rnd_762x51_Mag",4],["OPTRE_8Rnd_127x40_Mag",3]];
 	_items = [["OPTRE_MA5B_AmmoCounter",1],["OPTRE_MA5B_Flashlight",1],["OPTRE_M6G_Flashlight",1],["OPTRE_Biofoam",1]];
-	player addUniform "OPTRE_UNSC_Marine_Uniform";
-	player addVest "OPTRE_UNSC_Marine_Vest";
-	player addHeadgear "OPTRE_UNSC_Marine_Helmet_Vacuum";
-	player addGoggles "OPTRE_HUD_w_Glasses";
+	_crate addItemCargoGlobal "OPTRE_UNSC_Marine_Uniform";
+	_crate addItemCargoGlobal "OPTRE_UNSC_Marine_Vest";
+	_crate addItemCargoGlobal "OPTRE_UNSC_Marine_Helmet_Vacuum";
+	_crate addItemCargoGlobal "OPTRE_HUD_w_Glasses";
 };
 //-----------------------------------
 player linkItem "itemMap";

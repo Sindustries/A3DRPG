@@ -30,8 +30,6 @@ removeBackpack player;
 removeAllWeapons player;
 removeAllAssignedItems player;
 removeGoggles player;
-player addUniform "U_BG_Guerilla2_1";
-player addHeadgear "H_Cap_blk_CMMG";
 //-----------------------------------
 //-SPAWN PLAYER
 diag_log "-- FINDING SPAWN BUILDING.. --";
