@@ -16,13 +16,14 @@ diag_log "----------------------------------------------------------------------
 diag_log "---------------------------------------- A3DRPG CLIENT INIT ----------------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
 //-----------------------------------
+RPG_clientMarkers = [];
+//-----------------------------------
 waitUntil {time > 0};
 cutText ["", "BLACK FADED", 999];
 setDate [2155, 7, 4, 7, 0];
 waitUntil {RPG_serverReady isEqualTo true};
 diag_log "-- SERVER READY, PREPARING.. --"; 
 //-----------------------------------
-//-PLAYER LOADOUT
 removeUniform player;
 removeVest player;
 removeHeadgear player;
@@ -46,13 +47,28 @@ if ((count _houseList) > 0) then {
 		};	
 	} forEach _houseList;
 	if ((count _spawnableHouses) > 0) then {
+		private ["_playerPosFound","_markerName","_marker"];
+		_playerPosFound = false;
 		_house = selectRandom _spawnableHouses;
 		_housePos = _house buildingPos -1;
-		_spawnPos = selectRandom _housePos;
+		_cratePos = selectRandom _housePos;
 		_crate = "OPTRE_Ammo_SupplyPod_Empty" createVehicle [0,0,0];
-		_crate setPos _spawnPos;
-		_spawnPos = selectRandom _housePos;
-		player setPos _spawnPos;
+		_crate setPos _cratePos;
+		while {!_playerPosFound} do {
+			_spawnPos = selectRandom _housePos;
+			if (_spawnPos != _cratePos) then {
+				player setPos _spawnPos;
+				_markerName = format["House %1",(getPos _house)];
+				_marker = createMarkerLocal [_markerName, (getPos _house)];
+				_marker setMarkerShapeLocal "ICON";
+				_marker setMarkerTypeLocal "loc_Tourism";
+				_marker setMarkerColorLocal "ColorBlufor";
+				_marker setMarkerSizeLocal [0.75,0.75];
+				_marker setMarkerAlphaLocal 1;
+				_marker setMarkerTextLocal "Safehouse";
+				RPG_clientMarkers pushBack _marker;
+			};
+		};
 		_spawned = true;
 	};
 };
