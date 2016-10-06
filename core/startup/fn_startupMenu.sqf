@@ -28,7 +28,6 @@ private["_display","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn
 disableSerialization;
 diag_log "-- CLASS SELECTION OPEN --"; 
 
-varCrate = _this select 0;
 //-----------------------------------
 if (!dialog) then {
     createDialog "RPG_startup";
@@ -61,7 +60,7 @@ _Class8 = _display displayCtrl Class8;
 	_x ctrlSetStructuredText parseText "COMING SOON";
 } forEach [_Class5,_Class6,_Class7,_Class8];
 //-----------------------------------
-_Btn1 buttonSetAction "[1,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Btn1 buttonSetAction "[1] call RPG_fnc_loadPlayerSpawn;";
 _Class1 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>UNSC MARINE</t><br/>
 <t align='center' size='0.7'>Credits: 1000<br/>
@@ -70,7 +69,7 @@ Weapon: MA5B ICWS Assault Rifle</t><br/>
 <t align='center' size='0.7'>Insurrectionists - ENEMY<br/>
 Colonial Police - NEUTRAL</t>";
 //-----------------------------------
-_Btn2 buttonSetAction "[2,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Btn2 buttonSetAction "[2] call RPG_fnc_loadPlayerSpawn;";
 _Class2 ctrlSetStructuredText parseText 
 "<t align='center' underline='true'>INSURRECTIONIST</t><br/>
 <t align='center' size='0.7'>Credits: ₵500<br/>
@@ -79,7 +78,7 @@ Weapon: M45 Tactical Shotgun</t><br/>
 <t align='center' size='0.7'>UNSC - ENEMY<br/>
 Colonial Police - NEUTRAL</t>";
 //-----------------------------------
-_Btn3 buttonSetAction "[3,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Btn3 buttonSetAction "[3] call RPG_fnc_loadPlayerSpawn;";
 _Class3 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>MERCENARY</t><br/>
 <t align='center' size='0.7'>Credits: ₵2500<br/>
@@ -89,7 +88,7 @@ Weapon: M7 SMG</t><br/>
 Insurrectionists - NEUTRAL<br/>
 Colonial Police - NEUTRAL</t>";
 //-----------------------------------
-_Btn4 buttonSetAction "[4,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Btn4 buttonSetAction "[4] call RPG_fnc_loadPlayerSpawn;";
 _Class4 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>CIVILIAN</t><br/>
 <t align='center' size='0.7'>Credits: ₵100<br/>

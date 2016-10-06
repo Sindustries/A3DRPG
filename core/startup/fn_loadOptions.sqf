@@ -5,11 +5,30 @@
     Description:
     Gives player starting gear based on whatever they choose
 */
-private ["_option","_crate","_weapons","_magazines","_items","_uniform","_vest","_helmet","_backpack","_glasses"];
+private ["_option","_newUnit","_oldUnit","_crate","_weapons","_magazines","_items","_uniform","_vest","_helmet","_backpack","_glasses"];
 //-----------------------------------
 _option = _this select 0;
-_crate = _this select 1;
+_newUnit = _this select 1;
+_crate = _this select 2;
+//-----------------------------------
+//-SWITCH UNIT
+obj _oldUnit = player;
+addSwitchableUnit _newUnit;
+setPlayable _newUnit;
+selectPlayer _newUnit;
+removeSwitchableUnit _oldUnit;
 
+systemChat format["Old: %1 | New: %2",_oldUnit,_newUnit];
+
+deleteVehicle _oldUnit;
+removeUniform player;
+removeVest player;
+removeHeadgear player;
+removeBackpack player;
+removeAllWeapons player;
+removeAllAssignedItems player;
+removeGoggles player;
+//-----------------------------------
 player addUniform "U_BG_Guerilla2_1";
 player addHeadgear "H_Cap_blk_CMMG";
 
@@ -43,6 +62,7 @@ if ((count _items) > 0) then {
 	} forEach _items;
 };
 //-----------------------------------
-spawnChosen = true;
 diag_log "-- CLASS CHOSEN --"; 
+spawnChosen = true;
+closeDialog 0;
 //-----------------------------------
