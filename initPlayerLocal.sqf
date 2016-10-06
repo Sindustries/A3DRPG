@@ -69,7 +69,7 @@ if (!_spawned) then {
 [_crate] call RPG_fnc_emptyVeh;
 _crate addWeaponCargoGlobal ["arifle_CTAR_blk_F",1];
 _crate addWeaponCargoGlobal ["OPTRE_M6G",1];
-_crate addWeaponCargoGlobal ["OPTRE_M6G_Flashlight",1];
+_crate additemCargoGlobal ["OPTRE_M6G_Flashlight",1];
 _crate addMagazineCargoGlobal ["30Rnd_580x42_Mag_Tracer_F",2];
 _crate addMagazineCargoGlobal ["OPTRE_8Rnd_127x40_Mag",3];
 _crate addBackpackCargoGlobal ["B_TacticalPack_blk",1];
