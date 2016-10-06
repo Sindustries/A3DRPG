@@ -16,6 +16,10 @@ diag_log "----------------------------------------------------------------------
 diag_log "---------------------------------------- A3DRPG CLIENT INIT ----------------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
 //-----------------------------------
+//-PLAYER VARIABLES
+player setVariable ["RPG_bank",0,true];
+player setVariable ["RPG_cash",0,true];
+//-----------------------------------
 RPG_safehouses = [];
 RPG_clientMarkers = [];
 //-----------------------------------
@@ -42,6 +46,7 @@ diag_log "-- PLAYER SPAWNED --";
 		[_this select 0,_this select 1,_this select 2,_this select 3,_this select 4] call RPG_fnc_keyHandler;
 	}];
 };
+[] call RPG_fnc_addActions;
 //-----------------------------------
 //enableSaving [false, true];
 enableEnvironment true;
