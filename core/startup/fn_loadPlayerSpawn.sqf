@@ -33,16 +33,19 @@ _Btn8 = _display displayCtrl Btn8;
 } forEach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
 
 //-----------------------------------
-private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_spawnPos","_crate","_cratePos"];
+private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_car","_spawnPos","_crate","_cratePos"];
 //-----------------------------------
 _option = _this select 0;
 //-----------------------------------
 if (_option isEqualTo 1) then {
 	_unitType = "OPTRE_UNSC_Marine_Soldier_Rifleman_AR";
 	_side = west;
+	_car = "OPTRE_M12_CIV2";
 };
 if (_option isEqualTo 2) then {
-	_unitType = "";
+	_unitType = "OPTRE_Ins_URF_Rifleman_Light";
+	_side = east;
+	_car = "OPTRE_M12_FAV_APC";
 };
 if (_option isEqualTo 3) then {
 	_unitType = "";
@@ -86,7 +89,7 @@ if ((count _houseList) > 0) then {
 			_playerPosFound = true;
 		};
 		_spawned = true;
-		private ["_carPosFound","_add","_nearRoads","_road","_dir","_spawncar"];
+		private ["_carPosFound","_add","_nearRoads","_road","_connectedRoads","_dir","_spawncar"];
 		_carPosFound = false;
 		_add = 20;
 		while {!_carPosFound} do {
@@ -94,10 +97,11 @@ if ((count _houseList) > 0) then {
 			if (count _nearRoads > 0) then {
 				_carPosFound = true;
 				_road = (_nearRoads select 0);
-				_dir = (getDir _road);
-				_spawnPos = (getPos _road);
-				_spawncar = "OPTRE_M12_CIV2" createVehicle [0,0,0];
-				_spawncar setPos _spawnpos;
+				_connectedRoads = roadsConnectedTo _road;
+				_dir = [_road, (_connectedRoads select 0)] call BIS_fnc_DirTo;
+				_carpos = (getPos _road);
+				_spawncar = _car createVehicle [0,0,0];
+				_spawncar setPos _carpos;
 				_spawncar setDir _dir;
 				[_spawncar] call RPG_fnc_emptyVeh;
 			} else {
@@ -109,9 +113,14 @@ if ((count _houseList) > 0) then {
 if (!_spawned) then {
 	_spawnPos = [(_location select 1),0,((_location select 2) select 0)] call RPG_fnc_findPos;
 	_cratePos = [_spawnPos,2,10] call RPG_fnc_findPos;
+	_carPos = [_spawnPos,5,20] call RPG_fnc_findPos;
 	_crate = "OPTRE_Ammo_SmallCache_Empty" createVehicle [0,0,0];
 	_crate setPos _cratePos;
-	_spawned = true;
+	_spawncar = _car createVehicle [0,0,0];
+	_spawncar setPos _carpos;
+	_spawncar setDir (random 360);
+	[_spawncar] call RPG_fnc_emptyVeh;
+	};
 };
 [_crate] call RPG_fnc_emptyVeh;
 _grp = createGroup _side;

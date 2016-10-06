@@ -55,7 +55,7 @@ _Class8 = _display displayCtrl Class8;
 {
 	_x ctrlEnable false;
 	_x ctrlSetTooltip "Not available yet";
-} forEach [_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
+} forEach [_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
 {
 	_x ctrlSetStructuredText parseText "COMING SOON";
 } forEach [_Class5,_Class6,_Class7,_Class8];
@@ -72,7 +72,7 @@ Colonial Police - NEUTRAL</t>";
 _Btn2 buttonSetAction "[2] call RPG_fnc_loadPlayerSpawn;";
 _Class2 ctrlSetStructuredText parseText 
 "<t align='center' underline='true'>INSURRECTIONIST</t><br/>
-<t align='center' size='0.7'>Credits: ₵500<br/>
+<t align='center' size='0.7'>Credits: 500<br/>
 Weapon: M45 Tactical Shotgun</t><br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
 <t align='center' size='0.7'>UNSC - ENEMY<br/>
@@ -81,7 +81,7 @@ Colonial Police - NEUTRAL</t>";
 _Btn3 buttonSetAction "[3] call RPG_fnc_loadPlayerSpawn;";
 _Class3 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>MERCENARY</t><br/>
-<t align='center' size='0.7'>Credits: ₵2500<br/>
+<t align='center' size='0.7'>Credits: 2500<br/>
 Weapon: M7 SMG</t><br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
 <t align='center' size='0.7'>UNSC - NEUTRAL<br/>
@@ -91,7 +91,7 @@ Colonial Police - NEUTRAL</t>";
 _Btn4 buttonSetAction "[4] call RPG_fnc_loadPlayerSpawn;";
 _Class4 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>CIVILIAN</t><br/>
-<t align='center' size='0.7'>Credits: ₵100<br/>
+<t align='center' size='0.7'>Credits: 100<br/>
 Weapon: M14 Hunting Rifle</t><br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
 <t align='center' size='0.7'>UNSC - NEUTRAL<br/>
