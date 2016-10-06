@@ -29,7 +29,7 @@ removeGoggles player;
 if (_option isEqualTo 1) then {
 	player addUniform "U_BG_Guerilla2_1";
 	player addHeadgear "H_Cap_blk_CMMG";
-	player setVariable ["RPG_credits",1000,true];
+	player setVariable ["RPG_bank",1000,true];
 	_weapons = [["OPTRE_MA5B",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_60Rnd_762x51_Mag",4],["OPTRE_8Rnd_127x40_Mag",3]];
 	_items = [
@@ -47,7 +47,7 @@ if (_option isEqualTo 1) then {
 };
 if (_option isEqualTo 2) then {
 	player addUniform "OPTRE_Ins_ER_rolled_surplus_black";
-	player setVariable ["RPG_credits",500,true];
+	player setVariable ["RPG_bank",500,true];
 	_weapons = [["OPTRE_M45",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_6Rnd_8Gauge_Pellets",6],["OPTRE_8Rnd_127x40_Mag",3],["OPTRE_M9_Frag",2]];
 	_items = [
@@ -64,7 +64,7 @@ if (_option isEqualTo 2) then {
 };
 if (_option isEqualTo 3) then {
 	player addUniform "U_IG_Guerilla2_1";
-	player setVariable ["RPG_credits",2500,true];
+	player setVariable ["RPG_bank",2500,true];
 	_weapons = [["OPTRE_M7",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_48Rnd_5x23mm_Mag",6],["OPTRE_8Rnd_127x40_Mag",3],["OPTRE_M9_Frag",3],["OPTRE_M2_Smoke",2]];
 	_items = [
@@ -86,7 +86,7 @@ if (_option isEqualTo 3) then {
 if (_option isEqualTo 4) then {
 	player addUniform "U_C_WorkerCoveralls";
 	player addGoggles "G_Shades_Blue";
-	player setVariable ["RPG_credits",100,true];
+	player setVariable ["RPG_bank",100,true];
 	_weapons = [["srifle_DMR_06_olive_F",1]];
 	_magazines = [["20Rnd_762x51_Mag",3]];
 	_items = [
@@ -100,7 +100,7 @@ if (_option isEqualTo 5) then {
 	player addUniform "U_Marshal";
 	player addHeadgear "H_StrawHat";
 	player addGoggles "G_Aviator";
-	player setVariable ["RPG_credits",10000,true];
+	player setVariable ["RPG_bank",10000,true];
 	_weapons = [["SMG_05_F",1],["hgun_Rook40_F",1]];
 	_magazines = [["30Rnd_9x21_Mag_SMG_02",3],["16Rnd_9x21_Mag",3]];
 	_items = [
