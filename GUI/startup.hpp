@@ -207,7 +207,7 @@ class RPG_mainStrText5: RscStructuredText
 };
 class RPG_mainStrText6: RscStructuredText
 {
-	idc = 888855;
+	idc = 888866;
 	x = 0.381406 * safezoneW + safezoneX;
 	y = 0.456 * safezoneH + safezoneY;
 	w = 0.103125 * safezoneW;
