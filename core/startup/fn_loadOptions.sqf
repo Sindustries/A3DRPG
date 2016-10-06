@@ -5,10 +5,11 @@
     Description:
     Gives player starting gear based on whatever they choose
 */
+private ["_option","_crate","_weapons","_magazines","_items","_uniform","_vest","_helmet","_backpack","_glasses"];
 //-----------------------------------
-_options = _this select 0;
+_crate = _this select 0;
 
-switch {_options} do {
+switch {lbCurSel 12224} do {
 	case 0: {
 		_weapons = [["OPTRE_MA5B",1],["OPTRE_M6G",1]];
 		_magazines = [["OPTRE_60Rnd_762x51_Mag",4],["OPTRE_8Rnd_127x40_Mag",3]];
@@ -48,14 +49,5 @@ player linkItem "itemCompass";
 } forEach _items;
 _crate addBackpackCargoGlobal _backpack;
 //-----------------------------------
-_crate addWeaponCargoGlobal ["arifle_CTAR_blk_F",1];
-_crate addWeaponCargoGlobal ["OPTRE_M6G",1];
-_crate additemCargoGlobal ["OPTRE_M6G_Flashlight",1];
-_crate addMagazineCargoGlobal ["30Rnd_580x42_Mag_Tracer_F",2];
-_crate addMagazineCargoGlobal ["OPTRE_8Rnd_127x40_Mag",3];
-_crate addBackpackCargoGlobal ["B_TacticalPack_blk",1];
-_crate addItemCargoGlobal ["OPTRE_Biofoam",3];
-_crate addItemCargoGlobal ["OPTRE_Glasses_Cigar",1];
-_crate addItemCargoGlobal ["itemMap",1];
-_crate addItemCargoGlobal ["itemWatch",1];
-_crate addItemCargoGlobal ["itemCompass",1];
+spawnChosen = true;
+//-----------------------------------

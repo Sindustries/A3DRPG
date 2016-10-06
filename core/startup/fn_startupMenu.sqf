@@ -30,4 +30,12 @@ _desc = _display displayCtrl Description1;
 
 lbSetCurSel [12224, 0];
 
-_Btn1 buttonSetAction "[lbCurSel 12224,_crate] spawn RPG_fnc_loadOptions; spawnChosen = true; closeDialog 0;";
+_Btn1 buttonSetAction "[lbCurSel 12224,_crate] call RPG_fnc_loadOptions; closeDialog 0;";
+
+[] spawn {
+	_sel = lbCurSel 12224;
+	while {dialog} do {
+		waitUntil {lbCurSel 12224 != _sel};
+		[] call RPG_fnc_startupMenuUpdate;
+	};
+};

@@ -10,79 +10,65 @@ class controls
 {
 
 ////////////////////////////////////////////////////////
-// GUI EDITOR OUTPUT START (by Sinbane, v1.063, #Nepenu)
+// GUI EDITOR OUTPUT START (by Sinbane, v1.063, #Baqanu)
 ////////////////////////////////////////////////////////
 
 class RPG_mainBG: IGUIBack
 {
 	idc = 2200;
-	x = 0.396876 * safezoneW + safezoneX;
-	y = 0.269 * safezoneH + safezoneY;
-	w = 0.216563 * safezoneW;
-	h = 0.308 * safezoneH;
+	x = 0.438127 * safezoneW + safezoneX;
+	y = 0.28 * safezoneH + safezoneY;
+	w = 0.134062 * safezoneW;
+	h = 0.297 * safezoneH;
 };
 class RPG_mainFrm1: RscFrame
 {
 	idc = 1800;
-	x = 0.396875 * safezoneW + safezoneX;
-	y = 0.269 * safezoneH + safezoneY;
-	w = 0.216563 * safezoneW;
-	h = 0.308 * safezoneH;
+	x = 0.438125 * safezoneW + safezoneX;
+	y = 0.28 * safezoneH + safezoneY;
+	w = 0.134062 * safezoneW;
+	h = 0.297 * safezoneH;
 };
 class RPG_mainClothingFrame: RscFrame
 {
 	idc = 1801;
-	x = 0.536094 * safezoneW + safezoneX;
-	y = 0.28 * safezoneH + safezoneY;
-	w = 0.0721875 * safezoneW;
-	h = 0.242 * safezoneH;
-};
-class RPG_mainClothingSelect: RscListbox
-{
-	idc = 12224;
-	onLBSelChanged = "[] spawn RPG_fnc_startupMenuUpdate";
-	x = 0.54125 * safezoneW + safezoneX;
-	y = 0.302 * safezoneH + safezoneY;
-	w = 0.061875 * safezoneW;
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.324 * safezoneH + safezoneY;
+	w = 0.113437 * safezoneW;
 	h = 0.209 * safezoneH;
-};
-class RPG_mainOKbtn: RscButtonMenuOK
-{
-	idc = 12220;
-	text = "ACCEPT"; //--- ToDo: Localize;
-	x = 0.536093 * safezoneW + safezoneX;
-	y = 0.533 * safezoneH + safezoneY;
-	w = 0.0721875 * safezoneW;
-	h = 0.033 * safezoneH;
-};
-class RPG_mainClothingText: RscText
-{
-	idc = 1723;
-	text = "SPAWN TYPE"; //--- ToDo: Localize;
-	x = 0.546406 * safezoneW + safezoneX;
-	y = 0.28 * safezoneH + safezoneY;
-	w = 0.0515625 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class RPG_mainOverviewFrm: RscFrame
-{
-	idc = 1802;
-	x = 0.402031 * safezoneW + safezoneX;
-	y = 0.28 * safezoneH + safezoneY;
-	w = 0.128906 * safezoneW;
-	h = 0.286 * safezoneH;
 };
 class RPG_mainOverviewText: RscText
 {
 	idc = 12228;
 	text = "TEST. BAWBAG. "; //--- ToDo: Localize;
-	x = 0.407187 * safezoneW + safezoneX;
+	x = 0.453594 * safezoneW + safezoneX;
+	y = 0.335 * safezoneH + safezoneY;
+	w = 0.103125 * safezoneW;
+	h = 0.187 * safezoneH;
+};
+class RPG_mainSpawnSelect: RscCombo
+{
+	idc = 12224;
+	text = "TESTING"; //--- ToDo: Localize;
+	x = 0.448438 * safezoneW + safezoneX;
 	y = 0.291 * safezoneH + safezoneY;
-	w = 0.118594 * safezoneW;
-	h = 0.264 * safezoneH;
+	w = 0.113437 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class RPG_mainBtn1: RscButton
+{
+	idc = 12220;
+	text = "CONFIRM"; //--- ToDo: Localize;
+	x = 0.453594 * safezoneW + safezoneX;
+	y = 0.544 * safezoneH + safezoneY;
+	w = 0.103125 * safezoneW;
+	h = 0.022 * safezoneH;
 };
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END
 ////////////////////////////////////////////////////////
+
+
+
 };
 };
