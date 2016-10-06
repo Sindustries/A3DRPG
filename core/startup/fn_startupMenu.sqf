@@ -60,16 +60,13 @@ _Class8 = _display displayCtrl Class8;
 } forEach [_Class5,_Class6,_Class7,_Class8];
 //-----------------------------------
 _Btn1 buttonSetAction "[1,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
-_Class1 ctrlSetStructuredText parseText "
-<t align='center'>UNSC MARINE</t><br/>
-<br/><t size='0.8'>
-Credits: ₵1000<br/>
-Weapon: MA5B ICWS Assault Rifle<br/>
-</t><br/>
-<t size='0.9'>RELATIONSHIPS</t><br/>
-<t size='0.8'>Insurrectionists - ENEMY<br/>
-Colonial Police - NEUTRAL</t>
-";
+_Class1 ctrlSetStructuredText parseText
+"<t align='center' underline='true'>UNSC MARINE</t>
+<t size='0.8'>Credits: ₵1000
+Weapon: MA5B ICWS Assault Rifle</t>
+<t underline='true'>RELATIONSHIPS</t>
+<t size='0.9'>Insurrectionists - ENEMY
+Colonial Police - NEUTRAL</t>";
 //-----------------------------------
 _Btn2 buttonSetAction "[2,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
 _Class2 ctrlSetStructuredText parseText "
