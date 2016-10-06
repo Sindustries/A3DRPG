@@ -5,15 +5,30 @@
     Description:
     Lets the player choose spawn options
 */
-#define Btn1 12220
-#define Choice1 12224
-#define Description1 12228
+//-----------------------------------
+#define Btn1 88881
+#define Btn2 88882
+#define Btn3 88883
+#define Btn4 88884
+#define Btn5 88885
+#define Btn6 88886
+#define Btn7 88887
+#define Btn8 88888
 
-private["_crate","_display","_Btn1","_choices","_desc"];
+#define Class1 888811
+#define Class2 888822
+#define Class3 888833
+#define Class4 888844
+#define Class5 888855
+#define Class6 888866
+#define Class7 888877
+#define Class8 888888
+
+private["_display","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Class1","_Class2","_Class3","_Class4","_Class5","_Class6","_Class7","_Class8"];
 disableSerialization;
 
 varCrate = _this select 0;
-
+//-----------------------------------
 if (!dialog) then {
     createDialog "RPG_startup";
 	waitUntil {dialog};
@@ -21,14 +36,98 @@ if (!dialog) then {
 
 _display = findDisplay 1222;
 _Btn1 = _display displayCtrl Btn1;
-_choices = _display displayCtrl Choice1;
-_desc = _display displayCtrl Description1;
-_choices ctrlSetEventHandler ["LBSelChanged", "[] call RPG_fnc_startupMenuUpdate"];
+_Btn2 = _display displayCtrl Btn2;
+_Btn3 = _display displayCtrl Btn3;
+_Btn4 = _display displayCtrl Btn4;
+_Btn5 = _display displayCtrl Btn5;
+_Btn6 = _display displayCtrl Btn6;
+_Btn7 = _display displayCtrl Btn7;
+_Btn8 = _display displayCtrl Btn8;
+_Class1 = _display displayCtrl Class1;
+_Class2 = _display displayCtrl Class2;
+_Class3 = _display displayCtrl Class3;
+_Class4 = _display displayCtrl Class4;
+_Class5 = _display displayCtrl Class5;
+_Class6 = _display displayCtrl Class6;
+_Class7 = _display displayCtrl Class7;
+_Class8 = _display displayCtrl Class8;
 
 {
-	_choices = lbAdd [12224, _x];
-} forEach ["UNSC MARINE","INSURRECTIONIST","MERCENARY","CIVILIAN"];
+	_x ctrlEnable false;
+} forEach [_Btn5,_Btn6,_Btn7,_Btn8];
+{
+	_x ctrlSetStructuredText parseText "COMING SOON";
+} forEach [_Class5,_Class6,_Class7,_Class8];
+//-----------------------------------
+_Btn1 buttonSetAction "[1,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Class1 ctrlSetStructuredText parseText "
+<t align='center' size='2.2'>UNSC MARINE</t><br/>
+<br/>
+Credits: ₵1000<br/>
+Weapon: MA5B ICWS Assault Rifle<br/>
+<br/>
+<t size='1.5'>RELATIONSHIPS</t><br/>
+Insurrectionists - ENEMY<br/>
+Colonial Police - NEUTRAL		
+";
+//-----------------------------------
+_Btn2 buttonSetAction "[2,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Class2 ctrlSetStructuredText parseText "
+<t align='center' size='2.2'>INSURRECTIONIST</t><br/>
+<br/>
+Credits: ₵500<br/>
+Weapon: M45 Tactical Shotgun<br/>
+<br/>
+<t size='1.5'>RELATIONSHIPS</t><br/>
+UNSC - ENEMY<br/>
+Colonial Police - NEUTRAL		
+";
+//-----------------------------------
+_Btn3 buttonSetAction "[3,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Class3 ctrlSetStructuredText parseText "
+<t align='center' size='2.2'>MERCENARY</t><br/>
+<br/>
+Credits: ₵2500<br/>
+Weapon: M7 SMG<br/>
+<br/>
+<t size='1.5'>RELATIONSHIPS</t><br/>
+UNSC - NEUTRAL<br/>
+Insurrectionists - NEUTRAL<br/>
+Colonial Police - NEUTRAL		
+";
+//-----------------------------------
+_Btn4 buttonSetAction "[4,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+_Class4 ctrlSetStructuredText parseText "
+<t align='center' size='2.2'>CIVILIAN</t><br/>
+<br/>
+Credits: ₵100<br/>
+Weapon: NONE<br/>
+<br/>
+<t size='1.5'>RELATIONSHIPS</t><br/>
+UNSC - NEUTRAL<br/>
+Insurrectionists - NEUTRAL<br/>
+Colonial Police - NEUTRAL		
+";
+//-----------------------------------
 
-lbSetCurSel [12224, 0];
 
-_Btn1 buttonSetAction "[lbCurSel 12224,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

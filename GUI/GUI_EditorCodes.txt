@@ -1,12 +1,32 @@
-/* #Fuhugu
+/* #Husohu
 $[
 	1.063,
 	["RPG_main",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
-	[2200,"RPG_mainBG",[1,"",["0.438127 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.134062 * safezoneW","0.297 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1800,"RPG_mainFrm1",[1,"",["0.438125 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.134062 * safezoneW","0.297 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1801,"RPG_mainClothingFrame",[1,"",["0.448438 * safezoneW + safezoneX","0.324 * safezoneH + safezoneY","0.113437 * safezoneW","0.209 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[2100,"RPG_mainSpawnSelect",[1,"TESTING",["0.448438 * safezoneW + safezoneX","0.291 * safezoneH + safezoneY","0.113437 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"RPG_mainBtn1",[1,"CONFIRM",["0.453594 * safezoneW + safezoneX","0.544 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1100,"RPG_mainStrText",[1,"I HATE GUIS THIS IS STUPID",["0.453594 * safezoneW + safezoneX","0.335 * safezoneH + safezoneY","0.103125 * safezoneW","0.187 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+	[2200,"RPG_mainBG",[1,"",["0.231875 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.53625 * safezoneW","0.429 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1801,"RPG_mainFrm1",[1,"",["0.231875 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.53625 * safezoneW","0.429 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1800,"RPG_mainFrm2",[1,"",["0.242187 * safezoneW + safezoneX","0.236 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"RPG_mainBtn1",[1,"SELECT",["0.247344 * safezoneW + safezoneX","0.401 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1100,"RPG_mainStrText1",[1,"",["0.247344 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1802,"RPG_mainFrm3",[1,"",["0.37625 * safezoneW + safezoneX","0.236 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1803,"RPG_mainFrm4",[1,"",["0.510312 * safezoneW + safezoneX","0.236 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1804,"RPG_mainFrm5",[1,"",["0.644375 * safezoneW + safezoneX","0.236 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1101,"RPG_mainStrText2",[1,"",["0.381406 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1102,"RPG_mainStrText3",[1,"",["0.515469 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1103,"RPG_mainStrText4",[1,"",["0.649531 * safezoneW + safezoneX","0.247 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"RPG_mainBtn2",[1,"SELECT",["0.381406 * safezoneW + safezoneX","0.401 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1602,"RPG_mainBtn3",[1,"SELECT",["0.515469 * safezoneW + safezoneX","0.401 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1603,"RPG_mainBtn4",[1,"SELECT",["0.649531 * safezoneW + safezoneX","0.401 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1805,"RPG_mainFrm6",[1,"",["0.242187 * safezoneW + safezoneX","0.445 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1604,"RPG_mainBtn5",[1,"SELECT",["0.247344 * safezoneW + safezoneX","0.61 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1806,"RPG_mainFrm7",[1,"",["0.37625 * safezoneW + safezoneX","0.445 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1807,"RPG_mainFrm8",[1,"",["0.510312 * safezoneW + safezoneX","0.445 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1808,"RPG_mainFrm9",[1,"",["0.644271 * safezoneW + safezoneX","0.44537 * safezoneH + safezoneY","0.113437 * safezoneW","0.198 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1605,"RPG_mainBtn6",[1,"SELECT",["0.381406 * safezoneW + safezoneX","0.61 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1606,"RPG_mainBtn7",[1,"SELECT",["0.515469 * safezoneW + safezoneX","0.61 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1607,"RPG_mainBtn8",[1,"SELECT",["0.649531 * safezoneW + safezoneX","0.61 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1104,"RPG_mainStrText5",[1,"",["0.247344 * safezoneW + safezoneX","0.456 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1105,"RPG_mainStrText6",[1,"",["0.381406 * safezoneW + safezoneX","0.456 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1106,"RPG_mainStrText7",[1,"",["0.515469 * safezoneW + safezoneX","0.456 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1107,"RPG_mainStrText8",[1,"",["0.649531 * safezoneW + safezoneX","0.456 * safezoneH + safezoneY","0.103125 * safezoneW","0.143 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
 ]
 */
