@@ -28,10 +28,10 @@ CIV_seaVehicles = ["Sea","OPTRE_UEG_Civ"] call RPG_fnc_getVehicles;
 PD_landVehicles = ["Land","OPTRE_PD"] call RPG_fnc_getVehicles;
 PD_airVehicles = ["Air","OPTRE_PD"] call RPG_fnc_getVehicles;
 PD_seaVehicles = ["Sea","OPTRE_PD"] call RPG_fnc_getVehicles;
-diag_log "-- VEHICLES FOUND --";
+diag_log "-- COMPLETE --";
 //-----------------------------------
 //-FIND LOCATIONS
-diag_log "-- FINDING LOCATIONS.. --";
+diag_log "-- FINDING LOCATIONS --";
 RPG_cities = [];
 RPG_villages = [];
 RPG_local = [];
@@ -49,9 +49,22 @@ RPG_local = [];
 publicVariable "RPG_cities";
 publicVariable "RPG_villages";
 publicVariable "RPG_local";
-diag_log "-- LOCATIONS FOUND --";
+diag_log "-- COMPLETE --";
 //-----------------------------------
-//-FIND STARTING LOCATION
+//-FIND LOCATIONS
+diag_log "-- SETTING BUILDING TIERS --";
+RPG_tier1Housing = ["Land_i_House_Small_03_V1_F","Land_i_House_Small_02_V3_F","Land_i_House_Small_02_V1_F","Land_i_House_Small_02_V2_F","Land_i_House_Small_01_V3_F","Land_i_House_Small_01_V1_F","Land_i_House_Small_01_V2_F"];
+RPG_tier2Housing = ["Land_i_Stone_HouseSmall_V3_F","Land_i_Stone_HouseSmall_V1_F","Land_i_House_Big_02_V3_F","Land_i_House_Big_02_V1_F","Land_i_House_Big_02_V2_F"];
+RPG_tier3Housing = ["Land_i_House_Big_01_V3_F","Land_i_House_Big_01_V1_F","Land_i_House_Big_01_V2_F"];
+RPG_militaryHousing = ["Land_i_Barracks_V1_F","Land_i_Barracks_V2_F","Land_u_Barracks_V2_F"];
+RPG_shopBuildings = ["Land_i_Shop_02_V3_F","Land_i_Shop_02_V1_F","Land_i_Shop_02_V2_F","Land_i_Shop_01_V3_F","Land_i_Shop_01_V1_F","Land_i_Shop_01_V2_F"];
+publicVariable "RPG_tier1Housing";
+publicVariable "RPG_tier2Housing";
+publicVariable "RPG_tier3Housing";
+publicVariable "RPG_militaryHousing";
+publicVariable "RPG_shopBuildings";
+diag_log "-- COMPLETE --";
+//-----------------------------------
 RPG_serverReady = true;
 publicVariable "RPG_serverReady";
 //-----------------------------------
