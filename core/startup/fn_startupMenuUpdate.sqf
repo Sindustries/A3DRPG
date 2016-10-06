@@ -21,7 +21,7 @@ _Btn1 ctrlEnable false;
 switch {lbCurSel 12224} do {
 	case 0: {
 		_desc ctrlSetText parseText format["
-		<t align='center' size='2.2'>UNSC</t><br/>
+		<t align='center' size='2.2'>UNSC MARINE</t><br/>
 		<br/>
 		Credits: ₵1000<br/>
 		Weapon: MA5B ICWS Assault Rifle<br/>

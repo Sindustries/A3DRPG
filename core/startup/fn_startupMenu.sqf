@@ -16,6 +16,7 @@ _crate = _this select 0;
 disableSerialization;
 if (!dialog) then {
     createDialog "RPG_startup";
+	waitUntil {dialog};
 };
 
 _display = findDisplay 1222;
@@ -23,6 +24,10 @@ _Btn1 = _display displayCtrl Btn1;
 _choices = _display displayCtrl Choice1;
 _desc = _display displayCtrl Description1;
 
-lbSetCurSel [_choices, 0];
+{
+	_choices = lbAdd [12224, _x];
+} forEach ["UNSC MARINE","INSURRECTIONIST","MERCENARY","CIVILIAN"];
+
+lbSetCurSel [12224, 0];
 
 _Btn1 buttonSetAction "[lbCurSel 12224,_crate] spawn RPG_fnc_loadOptions; closeDialog 0;";
