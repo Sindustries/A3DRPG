@@ -41,6 +41,7 @@ if (_option isEqualTo 1) then {
 		["OPTRE_UNSC_Marine_Vest",1],
 		["OPTRE_UNSC_Marine_Helmet_Vacuum",1],
 		["OPTRE_HUD_w_Glasses",1],
+		["Rangefinder",1],
 		["itemRadio",1]	
 	];
 };
@@ -56,9 +57,44 @@ if (_option isEqualTo 2) then {
 		["OPTRE_Biofoam",3],
 		["OPTRE_INS_UNSC_vest11",1],
 		["OPTRE_h_PatrolCap_Brown",1],
+		["Binocular",1],
 		["itemRadio",1]
 	];
 	_crate addBackPackCargoGlobal ["B_Kitbag_rgr",1];
+};
+if (_option isEqualTo 3) then {
+	player addUniform "U_BG_Guerilla2_1";
+	player setVariable ["RPG_credits",2500,true];
+	_weapons = [["OPTRE_M7",1],["OPTRE_M6G",1]];
+	_magazines = [["OPTRE_48Rnd_5x23mm_Mag",6],["OPTRE_8Rnd_127x40_Mag",3],["OPTRE_M9_Frag",3],["OPTRE_M2_Smoke",2]];
+	_items = [
+		["OPTRE_M7_silencer",1],
+		["OPTRE_M7_Laser",1],
+		["OPTRE_M7_Sight",1],
+		["OPTRE_M6_silencer",1],
+		["OPTRE_M6G_Flashlight",1],
+		["OPTRE_M6G_Scope",1],
+		["OPTRE_Biofoam",6],
+		["V_PlateCarrier1_blk",1],
+		["H_Bandanna_gry",1],
+		["OPTRE_EyePiece",1],
+		["Rangefinder",1],
+		["itemRadio",1]
+	];
+	_crate addBackPackCargoGlobal ["B_AssaultPack_blk",1];
+};
+if (_option isEqualTo 4) then {
+	player addUniform "U_C_WorkerCoveralls";
+	player addGoggles "G_Shades_Blue";
+	player setVariable ["RPG_credits",100,true];
+	_weapons = [["srifle_DMR_06_olive_F",1]];
+	_magazines = [["20Rnd_762x51_Mag",3]];
+	_items = [
+		["optic_KHS_old",1],
+		["Binocular",1],
+		["H_Cap_red",1]
+	];
+	_crate addBackPackCargoGlobal ["B_TacticalPack_blk",1];
 };
 //-----------------------------------
 player linkItem "itemMap";

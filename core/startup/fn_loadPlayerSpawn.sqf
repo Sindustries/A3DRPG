@@ -40,7 +40,7 @@ _option = _this select 0;
 if (_option isEqualTo 1) then {
 	_unitType = "OPTRE_UNSC_Marine_Soldier_Rifleman_AR";
 	_side = west;
-	_car = "OPTRE_M12_CIV2";
+	_car = "OPTRE_M813_TT_Marine";
 };
 if (_option isEqualTo 2) then {
 	_unitType = "OPTRE_Ins_URF_Rifleman_Light";
@@ -48,10 +48,14 @@ if (_option isEqualTo 2) then {
 	_car = "OPTRE_M12_FAV_APC";
 };
 if (_option isEqualTo 3) then {
-	_unitType = "";
+	_unitType = "I_soldier_F";
+	_side = resistance;
+	_car = "C_Offroad_01_F";
 };
 if (_option isEqualTo 4) then {
-	_unitType = "";
+	_unitType = "C_man_1_1_F";
+	_side = civilian;
+	_car = "C_Van_01_transport_F";
 };
 //-----------------------------------
 diag_log "-- FINDING SPAWN BUILDING.. --";
@@ -124,6 +128,21 @@ if (!_spawned) then {
 [_crate] call RPG_fnc_emptyVeh;
 _grp = createGroup _side;
 _unit = _grp createUnit [_unitType, _spawnPos, [], 0, "NONE"];
+//-----------------------------------
+if (_option isEqualTo 3) then {
+	[
+		_spawncar,
+		["Guerilla_09",1], 
+		["HideBackpacks",0,"HideBumper2",0,"HideConstruction",0,"Proxy",0,"Destruct",0]
+	] call BIS_fnc_initVehicle;
+};
+if (_option isEqualTo 4) then {
+	[
+		_spawncar,
+		["White",1], 
+		true
+	] call BIS_fnc_initVehicle;
+};
 //-----------------------------------
 diag_log format["-- SPAWN LOCATION: %1 --",(_location select 0)];
 [_option,_unit,_crate] call RPG_fnc_loadOptions;
