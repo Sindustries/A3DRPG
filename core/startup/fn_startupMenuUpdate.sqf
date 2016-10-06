@@ -11,6 +11,7 @@
 #define Description1 12228
 
 private["_display","_Btn1","_choices","_desc"];
+disableSerialization;
 
 _display = findDisplay 1222;
 _choices = _display displayCtrl Choice1;

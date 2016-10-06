@@ -68,7 +68,10 @@ if (!_spawned) then {
 };
 player setDir (getDir _crate);
 [_crate] call RPG_fnc_emptyVeh;
-[_crate] call RPG_fnc_startupMenu;
+spawnChosen = false;
+while {!spawnChosen} do {
+	[_crate] call RPG_fnc_startupMenu;
+};
 diag_log "-- PLAYER SPAWNED --";
 diag_log format["-- SPAWN LOCATION: %1 --",(_location select 0)];
 //-----------------------------------

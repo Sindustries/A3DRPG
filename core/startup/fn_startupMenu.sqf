@@ -10,10 +10,10 @@
 #define Description1 12228
 
 private["_crate","_display","_Btn1","_choices","_desc"];
+disableSerialization;
 
 _crate = _this select 0;
 
-disableSerialization;
 if (!dialog) then {
     createDialog "RPG_startup";
 	waitUntil {dialog};
@@ -30,4 +30,4 @@ _desc = _display displayCtrl Description1;
 
 lbSetCurSel [12224, 0];
 
-_Btn1 buttonSetAction "[lbCurSel 12224,_crate] spawn RPG_fnc_loadOptions; closeDialog 0;";
+_Btn1 buttonSetAction "[lbCurSel 12224,_crate] spawn RPG_fnc_loadOptions; spawnChosen = true; closeDialog 0;";
