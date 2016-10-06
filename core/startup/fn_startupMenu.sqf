@@ -55,7 +55,7 @@ _Class8 = _display displayCtrl Class8;
 {
 	_x ctrlEnable false;
 	_x ctrlSetTooltip "Not available yet";
-} forEach [_Btn6,_Btn7,_Btn8];
+} forEach [_Btn5,_Btn6,_Btn7,_Btn8];
 {
 	_x ctrlSetStructuredText parseText "<t align='center'>COMING SOON</t>";
 } forEach [_Class6,_Class7,_Class8];
