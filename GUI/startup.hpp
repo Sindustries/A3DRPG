@@ -37,10 +37,10 @@ class RPG_mainClothingFrame: RscFrame
 	w = 0.113437 * safezoneW;
 	h = 0.209 * safezoneH;
 };
-class RPG_mainOverviewText: RscText
+class RPG_mainStrText: RscStructuredText
 {
 	idc = 12228;
-	text = "TEST. BAWBAG. "; //--- ToDo: Localize;
+	text = "I HATE GUIS THIS IS STUPID"; //--- ToDo: Localize;
 	x = 0.453594 * safezoneW + safezoneX;
 	y = 0.335 * safezoneH + safezoneY;
 	w = 0.103125 * safezoneW;
@@ -50,6 +50,7 @@ class RPG_mainSpawnSelect: RscCombo
 {
 	idc = 12224;
 	text = "TESTING"; //--- ToDo: Localize;
+	onLBSelChanged = "[] spawn RPG_fnc_startupMenuUpdate";
 	x = 0.448438 * safezoneW + safezoneX;
 	y = 0.291 * safezoneH + safezoneY;
 	w = 0.113437 * safezoneW;
@@ -67,8 +68,5 @@ class RPG_mainBtn1: RscButton
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END
 ////////////////////////////////////////////////////////
-
-
-
 };
 };

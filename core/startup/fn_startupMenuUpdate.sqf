@@ -22,7 +22,7 @@ _Btn1 ctrlEnable false;
 
 switch {lbCurSel Choice1} do {
 	case 0: {
-		_desc ctrlSetText parseText format["
+		_desc ctrlSetStructuredText parseText format["
 		<t align='center' size='2.2'>UNSC MARINE</t><br/>
 		<br/>
 		Credits: ₵1000<br/>
@@ -34,7 +34,7 @@ switch {lbCurSel Choice1} do {
 		"]
 	};
 	case 1: {
-		_desc ctrlSetText parseText format["
+		_desc ctrlSetStructuredText parseText format["
 		<t align='center' size='2.2'>INSURRECTIONIST</t><br/>
 		<br/>
 		Credits: ₵500<br/>
@@ -46,7 +46,7 @@ switch {lbCurSel Choice1} do {
 		"]
 	};
 	case 2: {
-		_desc ctrlSetText parseText format["
+		_desc ctrlSetStructuredText parseText format["
 		<t align='center' size='2.2'>MERCENARY</t><br/>
 		<br/>
 		Credits: ₵2500<br/>
@@ -59,7 +59,7 @@ switch {lbCurSel Choice1} do {
 		"]
 	};
 	case 3: {
-		_desc ctrlSetText parseText format["
+		_desc ctrlSetStructuredText parseText format["
 		<t align='center' size='2.2'>CIVILIAN</t><br/>
 		<br/>
 		Credits: ₵100<br/>

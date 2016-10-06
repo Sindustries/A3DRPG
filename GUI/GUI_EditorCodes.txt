@@ -1,12 +1,12 @@
-/* #Baqanu
+/* #Fuhugu
 $[
 	1.063,
 	["RPG_main",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
 	[2200,"RPG_mainBG",[1,"",["0.438127 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.134062 * safezoneW","0.297 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
 	[1800,"RPG_mainFrm1",[1,"",["0.438125 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.134062 * safezoneW","0.297 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
 	[1801,"RPG_mainClothingFrame",[1,"",["0.448438 * safezoneW + safezoneX","0.324 * safezoneH + safezoneY","0.113437 * safezoneW","0.209 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1001,"RPG_mainOverviewText",[1,"TEST. BAWBAG. ",["0.453594 * safezoneW + safezoneX","0.335 * safezoneH + safezoneY","0.103125 * safezoneW","0.187 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
 	[2100,"RPG_mainSpawnSelect",[1,"TESTING",["0.448438 * safezoneW + safezoneX","0.291 * safezoneH + safezoneY","0.113437 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"RPG_mainBtn1",[1,"CONFIRM",["0.453594 * safezoneW + safezoneX","0.544 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+	[1600,"RPG_mainBtn1",[1,"CONFIRM",["0.453594 * safezoneW + safezoneX","0.544 * safezoneH + safezoneY","0.103125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1100,"RPG_mainStrText",[1,"I HATE GUIS THIS IS STUPID",["0.453594 * safezoneW + safezoneX","0.335 * safezoneH + safezoneY","0.103125 * safezoneW","0.187 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
 ]
 */
