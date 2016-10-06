@@ -36,6 +36,7 @@ removeGoggles player;
 diag_log "-- FINDING SPAWN BUILDING.. --";
 private ["_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_spawnPos","_crate","_cratePos"];
 _spawned = false;
+_usedPos = [];
 _location = (selectRandom RPG_villages);
 _spawnableHouses = [];
 _houseList = nearestObjects [(_location select 1), ["house"], ((_location select 2) select 0)];
@@ -54,9 +55,10 @@ if ((count _houseList) > 0) then {
 		_cratePos = selectRandom _housePos;
 		_crate = "OPTRE_Ammo_SupplyPod_Empty" createVehicle [0,0,0];
 		_crate setPos _cratePos;
+		_usedPos pushBack _cratePos;
 		while {!_playerPosFound} do {
 			_spawnPos = selectRandom _housePos;
-			if (_spawnPos != (getPos _crate)) then {
+			if (!(_spawnPos in _usedPos)) then {
 				player setPos _spawnPos;
 				_markerName = format["House %1",(getPos _house)];
 				_marker = createMarkerLocal [_markerName, (getPos _house)];
