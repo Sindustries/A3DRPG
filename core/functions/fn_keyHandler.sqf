@@ -14,7 +14,7 @@ _ctrl = _this select 3;
 _alt = _this select 4;
 _handled = false;
 //-----------------------------------
-
+hint format["%1 keyPress detected!",_code];
 switch {_code} do {
 	//Y-menu
 	/*case 21: {
@@ -42,11 +42,9 @@ switch {_code} do {
             if (soundVolume != 1) then {
 				_handled = true;
                 1 fadeSound 1;
-                systemChat localize "STR_MISC_soundnormal";
             } else {
 				_handled = true;
-                1 fadeSound 0.1;
-                systemChat localize "STR_MISC_soundfade";
+                1 fadeSound 0.25;
             };
         };
     };

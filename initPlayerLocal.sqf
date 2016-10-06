@@ -35,10 +35,14 @@ while {!spawnChosen} do {
 spawnChosen = nil;
 diag_log "-- PLAYER SPAWNED --";
 //-----------------------------------
-private "_keyHandler";
-_keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", "
-	[_this select 0,_this select 1,_this select 2,_this select 3,_this select 4] call RPG_fnc_keyHandler;
-"];
+[] spawn {
+	waitUntil {!isNull (findDisplay 46)};
+	private "_keyHandler";
+	_keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", {
+		[_this select 0,_this select 1,_this select 2,_this select 3,_this select 4] call RPG_fnc_keyHandler;
+	}];
+	hint "keyhandler active";
+};
 //-----------------------------------
 //enableSaving [false, true];
 enableEnvironment true;
