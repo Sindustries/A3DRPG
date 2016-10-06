@@ -32,23 +32,33 @@ if (_option isEqualTo 1) then {
 	player setVariable ["RPG_credits",1000,true];
 	_weapons = [["OPTRE_MA5B",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_60Rnd_762x51_Mag",4],["OPTRE_8Rnd_127x40_Mag",3]];
-	_items = [["OPTRE_MA5B_AmmoCounter",1],["OPTRE_MA5B_Flashlight",1],["OPTRE_M6G_Flashlight",1],["OPTRE_Biofoam",3]];
-	_crate addItemCargoGlobal ["OPTRE_UNSC_Marine_Uniform",1];
-	_crate addItemCargoGlobal ["OPTRE_UNSC_Marine_Vest",1];
-	_crate addItemCargoGlobal ["OPTRE_UNSC_Marine_Helmet_Vacuum",1];
-	_crate addItemCargoGlobal ["OPTRE_HUD_w_Glasses",1];
-	_crate addItemCargoGlobal ["itemRadio",1];
+	_items = [
+		["OPTRE_MA5B_AmmoCounter",1],
+		["OPTRE_MA5B_Flashlight",1],
+		["OPTRE_M6G_Flashlight",1],
+		["OPTRE_Biofoam",3],
+		["OPTRE_UNSC_Marine_Uniform",1],
+		["OPTRE_UNSC_Marine_Vest",1],
+		["OPTRE_UNSC_Marine_Helmet_Vacuum",1],
+		["OPTRE_HUD_w_Glasses",1],
+		["itemRadio",1]	
+	];
 };
 if (_option isEqualTo 2) then {
 	player addUniform "OPTRE_Ins_ER_rolled_surplus_black";
 	player setVariable ["RPG_credits",500,true];
 	_weapons = [["OPTRE_M45",1],["OPTRE_M6G",1]];
-	_magazines = [["OPTRE_6Rnd_8Gauge_Pellets",6],["OPTRE_8Rnd_127x40_Mag",3],["OPTRE_M9_Frag",2];
-	_items = [["OPTRE_M45_Flashlight",1],["OPTRE_M7_Sight",1],["OPTRE_M6G_Flashlight",1],["OPTRE_Biofoam",3]];
-	_crate addItemCargoGlobal ["OPTRE_INS_UNSC_vest11",1];
-	_crate addItemCargoGlobal ["OPTRE_h_PatrolCap_Brown",1];
-	_crate addBackpackCargoGlobal ["B_Kitbag_rgr",1];
-	_crate addItemCargoGlobal ["itemRadio",1];
+	_magazines = [["OPTRE_6Rnd_8Gauge_Pellets",6],["OPTRE_8Rnd_127x40_Mag",3],["OPTRE_M9_Frag",2]];
+	_items = [
+		["OPTRE_M45_Flashlight",1],
+		["OPTRE_M7_Sight",1],
+		["OPTRE_M6G_Flashlight",1],
+		["OPTRE_Biofoam",3],
+		["OPTRE_INS_UNSC_vest11",1],
+		["OPTRE_h_PatrolCap_Brown",1],
+		["itemRadio",1]
+	];
+	_crate addBackPackCargoGlobal ["B_Kitbag_rgr",1];
 };
 //-----------------------------------
 player linkItem "itemMap";
