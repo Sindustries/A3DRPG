@@ -84,7 +84,7 @@ if ((count _houseList) > 0) then {
 				_spawncar setPos _spawnpos;
 				_spawncar setDir _dir;
 				_markerName = format["Hou %1",(getPos _spawncar)];
-				_marker = createMarkerLocal [_markerName, (getPos _house)];
+				_marker = createMarkerLocal [_markerName, (getPos _spawncar)];
 				_marker setMarkerShapeLocal "ICON";
 				_marker setMarkerTypeLocal "loc_Tourism";
 				_marker setMarkerColorLocal "ColorBlufor";
