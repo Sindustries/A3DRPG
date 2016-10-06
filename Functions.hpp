@@ -17,6 +17,7 @@ class RPG_Core {
 	class startup {
 		file = "core\startup";
 		class loadOptions {};
+		class loadPlayerSpawn {};
 		class startupMenu {};
 		class startupMenuUpdate {};
 	}
