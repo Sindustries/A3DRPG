@@ -70,6 +70,31 @@ if ((count _houseList) > 0) then {
 			_playerPosFound = true;
 		};
 		_spawned = true;
+		private [];
+		_carPosFound = false;
+		_add = 20;
+		while {!_carPosFound} do {
+			_nearRoads = _house nearRoads _add;
+			if (count _nearRoads > 0) then {
+				_carPosFound = true;
+				_road = (_nearRoads select 0);
+				_dir = (getDir _road);
+				_spawnPos = (getPos _road);
+				_spawncar = "OPTRE_M12_CIV2" createVehicle [0,0,0];
+				_spawncar setPos _spawnpos;
+				_spawncar setDir _dir;
+				_markerName = format["Hou %1",(getPos _spawncar)];
+				_marker = createMarkerLocal [_markerName, (getPos _house)];
+				_marker setMarkerShapeLocal "ICON";
+				_marker setMarkerTypeLocal "loc_Tourism";
+				_marker setMarkerColorLocal "ColorBlufor";
+				_marker setMarkerSizeLocal [0.75,0.75];
+				_marker setMarkerAlphaLocal 1;
+				_marker setMarkerTextLocal "MUH KERR!";
+			} else {
+				_add = _add + 20;;
+			};
+		};
 	};
 };
 if (!_spawned) then {
