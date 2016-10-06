@@ -12,6 +12,7 @@ class RPG_Core {
 		file = "core\functions";
 		class emptyVeh {};
 		class getVehicles {};
+		class keyHandler {};
 	};
 	
 	class startup {
