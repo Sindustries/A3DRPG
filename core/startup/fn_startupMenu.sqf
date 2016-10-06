@@ -102,7 +102,7 @@ _Btn5 buttonSetAction "[5] call RPG_fnc_loadPlayerSpawn;";
 _Class5 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>CRIMINAL</t><br/>
 <t align='center' size='0.7'>Credits: 10000<br/>
-Weapon: </t><br/>
+Weapon: Protector SMG</t><br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
 <t align='center' size='0.7'>UNSC - NEUTRAL<br/>
 Insurrectionists - FRIENDLY<br/>
