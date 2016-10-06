@@ -22,7 +22,7 @@ _Btn1 ctrlEnable false;
 
 switch {lbCurSel Choice1} do {
 	case 0: {
-		_desc ctrlSetStructuredText parseText format["
+		_desc ctrlSetStructuredText parseText "
 		<t align='center' size='2.2'>UNSC MARINE</t><br/>
 		<br/>
 		Credits: ₵1000<br/>
@@ -31,10 +31,10 @@ switch {lbCurSel Choice1} do {
 		<t size='1.5'>REALATIONSHIPS</t><br/>
 		Insurrectionists - ENEMY<br/>
 		Colonial Police - NEUTRAL		
-		"]
+		";
 	};
 	case 1: {
-		_desc ctrlSetStructuredText parseText format["
+		_desc ctrlSetStructuredText parseText "
 		<t align='center' size='2.2'>INSURRECTIONIST</t><br/>
 		<br/>
 		Credits: ₵500<br/>
@@ -43,10 +43,10 @@ switch {lbCurSel Choice1} do {
 		<t size='1.5'>REALATIONSHIPS</t><br/>
 		UNSC - ENEMY<br/>
 		Colonial Police - NEUTRAL		
-		"]
+		";
 	};
 	case 2: {
-		_desc ctrlSetStructuredText parseText format["
+		_desc ctrlSetStructuredText parseText "
 		<t align='center' size='2.2'>MERCENARY</t><br/>
 		<br/>
 		Credits: ₵2500<br/>
@@ -56,10 +56,10 @@ switch {lbCurSel Choice1} do {
 		UNSC - NEUTRAL<br/>
 		Insurrectionists - NEUTRAL<br/>
 		Colonial Police - NEUTRAL		
-		"]
+		";
 	};
 	case 3: {
-		_desc ctrlSetStructuredText parseText format["
+		_desc ctrlSetStructuredText parseText "
 		<t align='center' size='2.2'>CIVILIAN</t><br/>
 		<br/>
 		Credits: ₵100<br/>
@@ -69,7 +69,7 @@ switch {lbCurSel Choice1} do {
 		UNSC - NEUTRAL<br/>
 		Insurrectionists - NEUTRAL<br/>
 		Colonial Police - NEUTRAL		
-		"]
+		";
 	};
 };
 
