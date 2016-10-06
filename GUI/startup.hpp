@@ -13,8 +13,8 @@ class controlsBackground {
 		text = "GUI\img\RPGtablet.paa";
 		x = 0.231875 * safezoneW + safezoneX;
 		y = 0.225 * safezoneH + safezoneY;
-		w = 0.485625 * safezoneW;
-		h = 0.854 * safezoneH;
+		w = 0.53625 * safezoneW;
+		h = 0.429 * safezoneH;
 	};
  };	
 	
