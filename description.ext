@@ -28,6 +28,7 @@ enableDebugConsole = 1;
 
 #include "GUI\defines.hpp"
 #include "GUI\startup.hpp"
+#include "GUI\atm.hpp"
 
 class CfgFunctions {
     #include "Functions.hpp"
