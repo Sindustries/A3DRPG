@@ -160,7 +160,7 @@ if (_option isEqualTo 4) then {
 	] call BIS_fnc_initVehicle;
 };
 //-----------------------------------
-if (!(isNil _location)) then {
+if (!(isNil "_location")) then {
 	diag_log format["-- SPAWN LOCATION: %1 --",(_location select 0)];
 } else {
 	diag_log format["-- SPAWN LOCATION: %1 --",(getPos player)];
