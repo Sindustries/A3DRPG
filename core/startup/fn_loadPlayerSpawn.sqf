@@ -33,7 +33,7 @@ _Btn8 = _display displayCtrl Btn8;
 } forEach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
 
 //-----------------------------------
-private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_car","_spawnPos","_crate","_cratePos","_carPosFound","_add","_nearRoads","_road","_connectedRoads","_dir","_spawncar"];
+private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_car","_locale","_housing","_spawnPos","_crate","_cratePos","_carPosFound","_add","_nearRoads","_road","_connectedRoads","_dir","_spawncar"];
 //-----------------------------------
 _option = _this select 0;
 //-----------------------------------
@@ -41,28 +41,40 @@ if (_option isEqualTo 1) then {
 	_unitType = "OPTRE_UNSC_Marine_Soldier_Rifleman_AR";
 	_side = west;
 	_car = "OPTRE_M813_TT_Marine";
+	_housing = RPG_militaryHousing;
 };
 if (_option isEqualTo 2) then {
 	_unitType = "OPTRE_Ins_URF_Rifleman_Light";
 	_side = east;
 	_car = "OPTRE_M12_FAV_APC";
+	_housing = RPG_tier1Housing;
 };
 if (_option isEqualTo 3) then {
 	_unitType = "I_soldier_F";
 	_side = resistance;
 	_car = "C_Offroad_01_F";
+	_locale = RPG_cities;
+	_housing = RPG_tier2Housing;
 };
 if (_option isEqualTo 4) then {
 	_unitType = "C_man_1_1_F";
 	_side = civilian;
 	_car = "C_Van_01_transport_F";
+	_locale = (RPG_cities+RPG_villages);
+	_housing = (RPG_tier1Housing+RPG_tier2Housing);
 };
 //-----------------------------------
 diag_log "-- FINDING SPAWN BUILDING.. --";
 _spawned = false;
-_location = (selectRandom RPG_villages);
 _spawnableHouses = [];
-_houseList = nearestObjects [(_location select 1), ["house"], ((_location select 2) select 0)];
+if (!(isNil "_locale")) then {
+	_location = (selectRandom _locale);
+};
+if (_option isEqualTo 3 || _option isEqualTo 4) then {
+	_houseList = nearestObjects [(_location select 1), _housing, ((_location select 2) select 0)];
+} else {
+	_houseList = nearestObjects [(getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition")), _housing, 50000];
+};
 if ((count _houseList) > 0) then {
 	{		
 		_buildingPos = _x buildingPos -1;
