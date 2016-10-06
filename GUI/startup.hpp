@@ -5,7 +5,9 @@ class RPG_startup
 	fadein=3;
 	duration = 1e+1000;
 	movingenable = false;
-//  onLoad = "_this call FRAME_01_Load";
+
+class controls
+{
 
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT START (by Sinbane, v1.063, #Nepenu)
@@ -82,4 +84,5 @@ class RPG_mainOverviewText: RscText
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END
 ////////////////////////////////////////////////////////
+};
 };
