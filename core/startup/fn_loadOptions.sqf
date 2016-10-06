@@ -96,6 +96,20 @@ if (_option isEqualTo 4) then {
 	];
 	_crate addBackPackCargoGlobal ["B_TacticalPack_blk",1];
 };
+if (_option isEqualTo 5) then {
+	player addUniform "U_Marshal";
+	player addHeadgear "H_StrawHat";
+	player addGoggles "G_Aviator";
+	player setVariable ["RPG_credits",10000,true];
+	_weapons = [["SMG_05_F",1],["hgun_Rook40_F",1];
+	_magazines = [["30Rnd_9x21_Mag_SMG_02",4]];
+	_items = [
+		["OPTRE_v_Ins_vest",1],
+		["OPTRE_Biofoam",1],
+		["optic_Aco",1],
+		["OPTRE_NVG",1]
+	];
+};
 //-----------------------------------
 player linkItem "itemMap";
 player linkItem "itemWatch";
