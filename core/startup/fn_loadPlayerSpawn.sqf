@@ -93,6 +93,7 @@ if ((count _houseList) > 0) then {
 		_housePos = _housePos - _cratePos;
 		while {!_playerPosFound} do {
 			_spawnPos = selectRandom _housePos;
+			_spawnPos = _house buildingExit 0;
 			_markerName = format["House %1",(getPos _house)];
 			_marker = createMarkerLocal [_markerName, (getPos _house)];
 			_marker setMarkerShapeLocal "ICON";
@@ -126,7 +127,11 @@ if ((count _houseList) > 0) then {
 	};
 };
 if (!_spawned) then {
-	_spawnPos = [(_location select 1),0,((_location select 2) select 0)] call RPG_fnc_findPos;
+	if (!(isNil _location)) then {
+		_spawnPos = [(_location select 1),0,((_location select 2) select 0)] call RPG_fnc_findPos;
+	} else {
+		_spawnPos = [(getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition")),0,50000] call RPG_fnc_findPos;
+	};
 	_cratePos = [_spawnPos,2,10] call RPG_fnc_findPos;
 	_carPos = [_spawnPos,5,20] call RPG_fnc_findPos;
 	_crate = "OPTRE_Ammo_SmallCache_Empty" createVehicle [0,0,0];
@@ -155,6 +160,10 @@ if (_option isEqualTo 4) then {
 	] call BIS_fnc_initVehicle;
 };
 //-----------------------------------
-diag_log format["-- SPAWN LOCATION: %1 --",(_location select 0)];
+if (!(isNil _location)) then {
+	diag_log format["-- SPAWN LOCATION: %1 --",(_location select 0)];
+} else {
+	diag_log format["-- SPAWN LOCATION: %1 --",(getPos player)];
+};
 [_option,_unit,_crate] call RPG_fnc_loadOptions;
 //-----------------------------------
