@@ -64,6 +64,7 @@ _Class1 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>UNSC MARINE</t><br/>
 <t size='0.7'>Credits: ₵1000<br/>
 Weapon: MA5B ICWS Assault Rifle</t><br/>
+<br/>
 <t size='0.9' underline='true'>RELATIONSHIPS</t><br/>
 <t size='0.7'>Insurrectionists - ENEMY<br/>
 Colonial Police - NEUTRAL</t>";
