@@ -55,10 +55,10 @@ _Class8 = _display displayCtrl Class8;
 {
 	_x ctrlEnable false;
 	_x ctrlSetTooltip "Not available yet";
-} forEach [_Btn5,_Btn6,_Btn7,_Btn8];
+} forEach [_Btn6,_Btn7,_Btn8];
 {
 	_x ctrlSetStructuredText parseText "<t align='center'>COMING SOON</t>";
-} forEach [_Class5,_Class6,_Class7,_Class8];
+} forEach [_Class6,_Class7,_Class8];
 //-----------------------------------
 _Btn1 buttonSetAction "[1] call RPG_fnc_loadPlayerSpawn;";
 _Class1 ctrlSetStructuredText parseText
@@ -97,4 +97,14 @@ Weapon: M14 Hunting Rifle</t><br/>
 <t align='center' size='0.7'>UNSC - NEUTRAL<br/>
 Insurrectionists - NEUTRAL<br/>
 Colonial Police - NEUTRAL</t>";
+//-----------------------------------
+_Btn5 buttonSetAction "[5] call RPG_fnc_loadPlayerSpawn;";
+_Class5 ctrlSetStructuredText parseText
+"<t align='center' underline='true'>CRIMINAL</t><br/>
+<t align='center' size='0.7'>Credits: 10000<br/>
+Weapon: </t><br/>
+<t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
+<t align='center' size='0.7'>UNSC - NEUTRAL<br/>
+Insurrectionists - FRIENDLY<br/>
+Colonial Police - WANTED</t>";
 //-----------------------------------
