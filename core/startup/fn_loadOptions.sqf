@@ -15,10 +15,6 @@ player addHeadgear "H_Cap_blk_CMMG";
 
 if (_option isEqualTo 1) then {
 	player setVariable ["RPG_credits",1000,true];
-	west setFriend [east, 0];
-	east setFriend [west, 0];
-	west setFriend [resistance, 1];
-	resistance setFriend [west, 1];
 	_weapons = [["OPTRE_MA5B",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_60Rnd_762x51_Mag",4],["OPTRE_8Rnd_127x40_Mag",3]];
 	_items = [["OPTRE_MA5B_AmmoCounter",1],["OPTRE_MA5B_Flashlight",1],["OPTRE_M6G_Flashlight",1],["OPTRE_Biofoam",3]];

@@ -64,9 +64,8 @@ _Class8 = _display displayCtrl Class8;
 _Btn1 buttonSetAction "[1,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
 _Class1 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>UNSC MARINE</t><br/>
-<t align='center' size='0.7'>Credits: ₵1000<br/>
+<t align='center' size='0.7'>Credits: 1000<br/>
 Weapon: MA5B ICWS Assault Rifle</t><br/>
-<br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
 <t align='center' size='0.7'>Insurrectionists - ENEMY<br/>
 Colonial Police - NEUTRAL</t>";
@@ -76,7 +75,6 @@ _Class2 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>INSURRECTIONIST</t><br/>
 <t align='center' size='0.7'>Credits: ₵500<br/>
 Weapon: M45 Tactical Shotgun</t><br/>
-<br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
 <t align='center' size='0.7'>UNSC - ENEMY<br/>
 Colonial Police - NEUTRAL</t>";
@@ -86,9 +84,9 @@ _Class3 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>MERCENARY</t><br/>
 <t align='center' size='0.7'>Credits: ₵2500<br/>
 Weapon: M7 SMG</t><br/>
-<br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
-<t align='center' size='0.7'>Insurrectionists - NEUTRAL<br/>
+<t align='center' size='0.7'>UNSC - NEUTRAL<br/>
+Insurrectionists - NEUTRAL<br/>
 Colonial Police - NEUTRAL</t>";
 //-----------------------------------
 _Btn4 buttonSetAction "[4,varCrate] call RPG_fnc_loadOptions; closeDialog 0;";
@@ -96,8 +94,8 @@ _Class4 ctrlSetStructuredText parseText
 "<t align='center' underline='true'>CIVILIAN</t><br/>
 <t align='center' size='0.7'>Credits: ₵100<br/>
 Weapon: M14 Hunting Rifle</t><br/>
-<br/>
 <t align='center' size='0.9' underline='true'>RELATIONSHIPS</t><br/>
-<t align='center' size='0.7'>Insurrectionists - NEUTRAL<br/>
+<t align='center' size='0.7'>UNSC - NEUTRAL<br/>
+Insurrectionists - NEUTRAL<br/>
 Colonial Police - NEUTRAL</t>";
 //-----------------------------------
