@@ -63,7 +63,7 @@ if (_option isEqualTo 2) then {
 	_crate addBackPackCargoGlobal ["B_Kitbag_rgr",1];
 };
 if (_option isEqualTo 3) then {
-	player addUniform "U_BG_Guerilla2_1";
+	player addUniform "U_IG_Guerilla2_1";
 	player setVariable ["RPG_credits",2500,true];
 	_weapons = [["OPTRE_M7",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_48Rnd_5x23mm_Mag",6],["OPTRE_8Rnd_127x40_Mag",3],["OPTRE_M9_Frag",3],["OPTRE_M2_Smoke",2]];
