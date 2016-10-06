@@ -23,6 +23,7 @@ _display = findDisplay 1222;
 _Btn1 = _display displayCtrl Btn1;
 _choices = _display displayCtrl Choice1;
 _desc = _display displayCtrl Description1;
+_choices ctrlSetEventHandler ["LBSelChanged", "[] call RPG_fnc_startupMenuUpdate"];
 
 {
 	_choices = lbAdd [12224, _x];

@@ -50,7 +50,6 @@ class RPG_mainSpawnSelect: RscCombo
 {
 	idc = 12224;
 	text = "TESTING"; //--- ToDo: Localize;
-	onLBSelChanged = "[] spawn RPG_fnc_startupMenuUpdate";
 	x = 0.448438 * safezoneW + safezoneX;
 	y = 0.291 * safezoneH + safezoneY;
 	w = 0.113437 * safezoneW;
