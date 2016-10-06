@@ -17,10 +17,10 @@ if (_option isEqualTo 1) then {
 	_weapons = [["OPTRE_MA5B",1],["OPTRE_M6G",1]];
 	_magazines = [["OPTRE_60Rnd_762x51_Mag",4],["OPTRE_8Rnd_127x40_Mag",3]];
 	_items = [["OPTRE_MA5B_AmmoCounter",1],["OPTRE_MA5B_Flashlight",1],["OPTRE_M6G_Flashlight",1],["OPTRE_Biofoam",1]];
-	_crate addItemCargoGlobal "OPTRE_UNSC_Marine_Uniform";
-	_crate addItemCargoGlobal "OPTRE_UNSC_Marine_Vest";
-	_crate addItemCargoGlobal "OPTRE_UNSC_Marine_Helmet_Vacuum";
-	_crate addItemCargoGlobal "OPTRE_HUD_w_Glasses";
+	_crate addItemCargoGlobal ["OPTRE_UNSC_Marine_Uniform",1];
+	_crate addItemCargoGlobal ["OPTRE_UNSC_Marine_Vest",1];
+	_crate addItemCargoGlobal ["OPTRE_UNSC_Marine_Helmet_Vacuum",1];
+	_crate addItemCargoGlobal ["OPTRE_HUD_w_Glasses",1];
 };
 //-----------------------------------
 player linkItem "itemMap";
