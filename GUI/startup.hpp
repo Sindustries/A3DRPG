@@ -6,6 +6,18 @@ class RPG_startup
 	duration = 1e+1000;
 	movingenable = false;
 
+class controlsBackground {
+	class RPG_tabletIMG: RscPicture
+	{
+		idc = -1;
+		text = "GUI\img\RPGtablet.paa";
+		x = 0.231875 * safezoneW + safezoneX;
+		y = 0.225 * safezoneH + safezoneY;
+		w = 0.485625 * safezoneW;
+		h = 0.854 * safezoneH;
+	};
+ };	
+	
 class controls
 {
 
