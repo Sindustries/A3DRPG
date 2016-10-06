@@ -12,7 +12,7 @@ _newUnit = _this select 1;
 _crate = _this select 2;
 //-----------------------------------
 //-SWITCH UNIT
-obj _oldUnit = player;
+_oldUnit = player;
 addSwitchableUnit _newUnit;
 setPlayable _newUnit;
 selectPlayer _newUnit;
