@@ -33,35 +33,47 @@ _Btn8 = _display displayCtrl Btn8;
 } forEach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
 
 //-----------------------------------
-private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_car","_locale","_housing","_spawnPos","_crate","_cratePos","_carPosFound","_add","_nearRoads","_road","_connectedRoads","_dir","_spawncar"];
+private ["_option","_spawned","_location","_spawnableHouses","_houseList","_buildingPos","_house","_housePos","_grp","_unit","_unitType","_side","_container","_car","_locale","_housing","_spawnPos","_crate","_cratePos","_carPosFound","_add","_nearRoads","_road","_connectedRoads","_dir","_spawncar"];
 //-----------------------------------
 _option = _this select 0;
 //-----------------------------------
 if (_option isEqualTo 1) then {
 	_unitType = "OPTRE_UNSC_Marine_Soldier_Rifleman_AR";
 	_side = west;
+	_container = "plp_ct_MilBoxMediumBlack";
 	_car = "OPTRE_M813_TT_Marine";
 	_housing = RPG_militaryHousing;
 };
 if (_option isEqualTo 2) then {
 	_unitType = "OPTRE_Ins_URF_Rifleman_Light";
 	_side = east;
+	_container = "plp_ct_WeathCrateMediumWorn";
 	_car = "OPTRE_M12_FAV_APC";
 	_housing = RPG_tier1Housing;
 };
 if (_option isEqualTo 3) then {
 	_unitType = "I_soldier_F";
 	_side = resistance;
+	_container = "plp_ct_TravelBagBlue";
 	_car = "C_Offroad_01_F";
 	_locale = RPG_cities;
 	_housing = RPG_tier2Housing;
 };
 if (_option isEqualTo 4) then {
-	_unitType = "C_man_1_1_F";
+	_unitType = "C_man_w_worker_F";
 	_side = civilian;
+	_container = "plp_ct_CasketLeatherBlack";
 	_car = "C_Van_01_transport_F";
 	_locale = (RPG_cities+RPG_villages);
 	_housing = (RPG_tier1Housing+RPG_tier2Housing);
+};
+if (_option isEqualTo 5) then {
+	_unitType = "C_man_p_fugitive_F";
+	_side = civilian;
+	_container = "plp_ct_SuitcaseMetalSilverSide";
+	_car = "C_SUV_01_F";
+	_locale = RPG_cities;
+	_housing = RPG_tier3Housing;
 };
 //-----------------------------------
 diag_log "-- FINDING SPAWN BUILDING.. --";
@@ -88,7 +100,7 @@ if ((count _houseList) > 0) then {
 		_house = selectRandom _spawnableHouses;
 		_housePos = _house buildingPos -1;
 		_cratePos = selectRandom _housePos;
-		_crate = "OPTRE_Ammo_SupplyPod_Empty" createVehicle [0,0,0];
+		_crate = _container createVehicle [0,0,0];
 		_crate setPos _cratePos;
 		_housePos = _housePos - _cratePos;
 		while {!_playerPosFound} do {
@@ -134,7 +146,7 @@ if (!_spawned) then {
 	};
 	_cratePos = [_spawnPos,2,10] call RPG_fnc_findPos;
 	_carPos = [_spawnPos,5,20] call RPG_fnc_findPos;
-	_crate = "OPTRE_Ammo_SmallCache_Empty" createVehicle [0,0,0];
+	_crate = _container createVehicle [0,0,0];
 	_crate setPos _cratePos;
 	_spawncar = _car createVehicle [0,0,0];
 	_spawncar setPos _carpos;
@@ -156,6 +168,13 @@ if (_option isEqualTo 4) then {
 	[
 		_spawncar,
 		["White",1], 
+		true
+	] call BIS_fnc_initVehicle;
+};
+if (_option isEqualTo 5) then {
+	[
+		_spawncar,
+		["Black",1], 
 		true
 	] call BIS_fnc_initVehicle;
 };
