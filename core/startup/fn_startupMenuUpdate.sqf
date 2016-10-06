@@ -14,6 +14,7 @@ private["_display","_Btn1","_choices","_desc"];
 disableSerialization;
 
 _display = findDisplay 1222;
+_Btn1 = _display displayCtrl Btn1;
 _choices = _display displayCtrl Choice1;
 _desc = _display displayCtrl Description1;
 
