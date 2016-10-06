@@ -67,6 +67,7 @@ if ((count _houseList) > 0) then {
 			_marker setMarkerAlphaLocal 1;
 			_marker setMarkerTextLocal "Safehouse";
 			RPG_clientMarkers pushBack _marker;
+			_playerPosFound = true;
 		};
 		_spawned = true;
 	};
