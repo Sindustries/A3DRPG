@@ -56,7 +56,7 @@ if ((count _houseList) > 0) then {
 		_crate setPos _cratePos;
 		while {!_playerPosFound} do {
 			_spawnPos = selectRandom _housePos;
-			if (_spawnPos != _cratePos) then {
+			if (_spawnPos != (getPos _crate)) then {
 				player setPos _spawnPos;
 				_markerName = format["House %1",(getPos _house)];
 				_marker = createMarkerLocal [_markerName, (getPos _house)];
