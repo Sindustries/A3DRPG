@@ -28,10 +28,13 @@ _Input1 = _display displayCtrl Input1;
 
 //-----------------------------------
 _Text1 ctrlSetStructuredText parseText format[
-"<t align='center' underline='true'>GLOBAL BANKING CORP</t><br/>
-<t align='center' size='0.7'>CREDIT BALANCE:<br/>
-%1</t><br/>
+"<t align='center' underline='true'>GLOBAL BANKING<br/>
+CORPORATION</t><br/>
+<t align='center' size='0.7'>ACCOUNT BALANCE:<br/>
+%1<br/>
+CREDIT BALANCE:<br/>
+%2<br/></t>
 <br/>
-<t align='center' size='0.5'>Thank you for choosing GBC for your banking needs.</t>",
-(player getVariable ["RPG_bank",0])];
+<t align='center' size='0.6'>Thank you for choosing GBC for your banking needs.</t>",
+(player getVariable ["RPG_bank",0]),(player getVariable ["RPG_credits",0])];
 //-----------------------------------
