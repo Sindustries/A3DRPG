@@ -6,7 +6,6 @@
     Withdraws credits from the player GBC account
 */
 private["_balance","_cash","_value"];
-if ((typeName (ctrlText 144414)) != "SCALAR") exitWith {};
 _value = parseNumber(ctrlText 144414);
 if (_value > 999999) exitWith {hint "GBC Error: You can't withdraw this much.";};
 if (_value < 0) exitWith {};
