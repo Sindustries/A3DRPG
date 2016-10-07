@@ -55,7 +55,7 @@ player allowDamage true;
 player enableStamina true;
 cutText ["", "BLACK IN", 5];
 //-----------------------------------
-//[] call RPG_fnc_01_prologue;
+[] spawn RPG_fnc_locationDisplay;
 //-----------------------------------
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log "----------------------------------- A3DRPG CLIENT INIT COMPLETE  -----------------------------------";
