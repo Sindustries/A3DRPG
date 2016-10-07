@@ -22,8 +22,10 @@ respawnDelay = 999999;
 respawnTemplates[] = {""};
 disabledAI = 1;
 //0 = Global 1 = Side 2 = Command 3 = Group 4 = Vehicle 5 = Direct 6 = System
-disableChannels[] = {{0, true, true},{2, true, true},{6, true, true}};
-joinUnassigned = 1;
+disableChannels[] = {{0, true, true},{1, false, true},{2, true, true},{6, true, true}};
+skipLobby = 1;
+saving = 0;
+briefing = 0;
 enableDebugConsole = 1;
 
 #include "GUI\defines.hpp"
