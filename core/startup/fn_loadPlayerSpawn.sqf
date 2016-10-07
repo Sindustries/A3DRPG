@@ -159,6 +159,11 @@ if (!_spawned) then {
 [_crate] call RPG_fnc_emptyVeh;
 _grp = createGroup _side;
 _unit = _grp createUnit [_unitType, _spawnPos, [], 0, "NONE"];
+_house setVariable ['bis_disabled_Door_1',1,true];
+_house setVariable ["RPG_owner",(getPlayerUID player)];
+RPG_safehouses pushBack _house;
+_spawncar setVariable ["RPG_owner",(getPlayerUID player)];
+_spawncar lock 2;
 //-----------------------------------
 if (_option isEqualTo 3) then {
 	[
