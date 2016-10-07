@@ -62,14 +62,14 @@ switch (_code) do {
 				_locked = (_house getVariable ["bis_disabled_Door_1",1]);
 				_doors = getNumber(configFile >> "CfgVehicles" >> (typeOf _house) >> "numberOfDoors");
                 if (_locked isEqualTo 1) then {
-					{
-						_x setVariable [format["bis_disabled_Door_%1",_forEachIndex],0,false];
-					} forEach _doors;
+					for "_i" from 0 to _doors do {
+						_house setVariable [format["bis_disabled_Door_%1",_i],0,false];
+					};
 					hint "House Unlocked";
 				} else {
-					{
-						_x setVariable [format["bis_disabled_Door_%1",_forEachIndex],1,true];
-					} forEach _doors;
+					for "_i" from 0 to _doors do {
+						_house setVariable [format["bis_disabled_Door_%1",_i],1,true];
+					};
 					hint "House Locked";
 				};
 				_handled = true;
