@@ -25,15 +25,17 @@ _Btn1 = _display displayCtrl Btn1;
 _Btn2 = _display displayCtrl Btn2;
 _Text1 = _display displayCtrl Text1;
 _Input1 = _display displayCtrl Input1;
+_Input1 ctrlSetText "";
+_Input1 ctrlSetTooltip "ENTER HOW MUCH YOU'D LIKE TO WITHDRAW/DEPOSIT";
 
 //-----------------------------------
 _Text1 ctrlSetStructuredText parseText format[
 "<t align='center' underline='true'>GLOBAL BANKING<br/>
 CORPORATION</t><br/>
 <t align='center' size='0.7'>ACCOUNT BALANCE:<br/>
-%1<br/>
+¤%1<br/>
 CREDIT BALANCE:<br/>
-%2<br/></t>
+¤%2<br/></t>
 <br/>
 <t align='center' size='0.6'>Thank you for choosing GBC for your banking needs.</t>",
 (player getVariable ["RPG_bank",0]),(player getVariable ["RPG_credits",0])];
