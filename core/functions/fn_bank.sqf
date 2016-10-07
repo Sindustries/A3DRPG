@@ -11,7 +11,7 @@
 #define Text1 144411
 #define Input1 144414
 
-private[];
+private["_display","_Btn1","_Btn2","_Text1","_Input1"];
 disableSerialization;
 
 //-----------------------------------
@@ -29,7 +29,7 @@ _Input1 ctrlSetText "";
 
 //-----------------------------------
 _Text1 ctrlSetStructuredText parseText format[
-"<t align='center' underline='true'>GLOBAL BANKING<br/>
+"<t align='center' underline='true' color='#ffff00'>GLOBAL BANKING<br/>
 CORPORATION</t><br/>
 <t align='center' size='0.7'>ACCOUNT BALANCE:<br/>
 %1<br/>
