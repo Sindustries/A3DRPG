@@ -18,6 +18,6 @@ _cash = _cash + _value;
 _balance = _balance - _value;
 player setVariable ["RPG_bank",_balance,true];
 player setVariable ["RPG_credits",_cash,true];
-hint format["GBC Account Update: %1 credits have successfully been withdrawn from your account.",_value];
+[_value,1] call RPG_fnc_bankMessage;
 
 [] call RPG_fnc_bank;
