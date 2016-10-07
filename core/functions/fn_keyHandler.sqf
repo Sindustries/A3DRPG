@@ -52,15 +52,24 @@ switch (_code) do {
     case 22: {
         if (!_shift && !_ctrl && !_alt) then {
 			private ["_veh","_house","_locked","_owner"];
-			_veh = cursorObject;
+			if (isNull objectParent player) then {
+				_veh = cursorObject;
+			} else {
+				_veh = vehicle player;
+			};
             if (_veh isKindOf "House_F" && _veh in RPG_safehouses && player distance _veh < 10) then {
 				_house = cursorObject;
 				_locked = (_house getVariable ["bis_disabled_Door_1",1]);
+				_doors = getNumber(configFile >> "CfgVehicles" >> (typeOf _house) >> "numberOfDoors");
                 if (_locked isEqualTo 1) then {
-					_house setVariable ['bis_disabled_Door_1',0,false];
+					{
+						_x setVariable [format["bis_disabled_Door_%1",_forEachIndex],0,false];
+					} forEach _doors;
 					hint "House Unlocked";
 				} else {
-					_house setVariable ['bis_disabled_Door_1',1,true];
+					{
+						_x setVariable [format["bis_disabled_Door_%1",_forEachIndex],1,true];
+					} forEach _doors;
 					hint "House Locked";
 				};
 				_handled = true;
