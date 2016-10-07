@@ -85,14 +85,14 @@ if (!(isNil "_locale")) then {
 } else {
 	_houseList = nearestObjects [(getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition")), _housing, 50000];
 };
+_toRemove = [];
+{
+	if (!(_x in _housing)) then {
+		_toRemove pushBack _x;
+	};
+} forEach _houseList;
+_houseList = _houseList - _toRemove;
 if ((count _houseList) > 0) then {
-	_toRemove = [];
-	{
-		if (!(_x in _housing)) then {
-			_toRemove pushBack _x;
-		};
-	} forEach _houseList;
-	_houseList = _houseList - _toRemove;
 	{		
 		_buildingPos = _x buildingPos -1;
 		if ((count _buildingPos) >= 2) then {
@@ -149,7 +149,7 @@ if ((count _houseList) > 0) then {
 	};
 };
 if (!_spawned) then {
-	if (!(isNil _location)) then {
+	if (!(isNil "_location")) then {
 		_spawnPos = [(_location select 1),0,((_location select 2) select 0)] call RPG_fnc_findPos;
 	} else {
 		_spawnPos = [(getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition")),0,50000] call RPG_fnc_findPos;
