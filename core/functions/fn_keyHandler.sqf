@@ -22,12 +22,12 @@ switch (_code) do {
 	
 	//H - Holster
 	case 35: {
-        if (!_shift && !_ctrl && !_alt && !(currentWeapon player isEqualTo "")) then {
+        if (_shift && !_ctrl && !_alt && !(currentWeapon player isEqualTo "")) then {
 			_handled = true;
             curWep = currentWeapon player;
             player action ["SwitchWeapon", player, player, 100];
         };
-        if (!_shift && !_ctrl && !_alt && !isNil "curWep" && {!(curWep isEqualTo "")}) then {
+        if (!_shift && _ctrl && !_alt && !isNil "curWep" && {!(curWep isEqualTo "")}) then {
             if (curWep in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
 				_handled = true;
                 player selectWeapon curWep;
@@ -48,7 +48,7 @@ switch (_code) do {
         };
     };
 	
-	//U Key
+	//U - Locking and Unlocking
     case 22: {
         if (!_shift && !_ctrl && !_alt) then {
 			private ["_veh","_house","_locked","_owner"];
