@@ -86,6 +86,13 @@ if (!(isNil "_locale")) then {
 	_houseList = nearestObjects [(getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition")), _housing, 50000];
 };
 if ((count _houseList) > 0) then {
+	_toRemove = [];
+	{
+		if (!(_x in _housing)) then {
+			_toRemove pushBack _x;
+		};
+	} forEach _houseList;
+	_houseList = _houseList - _toRemove;
 	{		
 		_buildingPos = _x buildingPos -1;
 		if ((count _buildingPos) >= 2) then {
