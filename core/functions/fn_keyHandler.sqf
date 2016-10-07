@@ -27,7 +27,7 @@ switch (_code) do {
             curWep = currentWeapon player;
             player action ["SwitchWeapon", player, player, 100];
         };
-        if (!_shift && _ctrl && !_alt && !isNil "curWep" && {!(curWep isEqualTo "")}) then {
+        if (!_shift && !_ctrl && !_alt && !isNil "curWep" && {!(curWep isEqualTo "")}) then {
             if (curWep in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
 				_handled = true;
                 player selectWeapon curWep;
@@ -45,6 +45,39 @@ switch (_code) do {
 				_handled = true;
                 1 fadeSound 0.25;
             };
+        };
+    };
+	
+	//U Key
+    case 22: {
+        if (!_shift && !_ctrl && !_alt) then {
+			private ["_veh","_house","_locked","_owner"];
+			_veh = cursorObject;
+            if (_veh isKindOf "House_F" && _veh in RPG_safehouses && player distance _veh < 5) then {
+				_house = cursorObject;
+				_locked = (_house getVariable ["bis_disabled_Door_1",1]);
+                if (_locked isEqualTo 1) then {
+					_house setVariable ['bis_disabled_Door_1',0,false];
+					hint "House Unlocked";
+				} else {
+					_house setVariable ['bis_disabled_Door_1',1,true];
+					hint "House Locked";
+				};
+            };
+			if (_veh isKindOf "Land" || _veh isKindOf "Sea" || _veh isKindOf "Air") then {
+				_owner = (_veh getVariable ["RPG_owner",0]);
+				if ((getPlayerUID player) isEqualTo _owner && player distance _veh < 6) then {
+					_locked = locked _veh;
+					if (_locked isEqualTo 0) then {
+						_veh lock 2;
+						hint "Vehicle Locked";
+					};
+					if (_locked isEqualTo 2) then {
+						_veh lock 0;
+						hint "Vehicle Unlocked";
+					};
+				};
+			};
         };
     };
 };
