@@ -14,6 +14,7 @@ class RPG_Core {
 		file = "core\functions";
 		class bank {};
 		class bankDeposit {};
+		class bankMessage {};
 		class bankWithdraw {};
 		class keyHandler {};		
 	};
@@ -23,6 +24,7 @@ class RPG_Core {
 		class addActions {};
 		class loadOptions {};
 		class loadPlayerSpawn {};
+		class locationDisplay {};
 		class startupMenu {};
 	}
 	
