@@ -53,7 +53,7 @@ switch (_code) do {
         if (!_shift && !_ctrl && !_alt) then {
 			private ["_veh","_house","_locked","_owner"];
 			_veh = cursorObject;
-            if (_veh isKindOf "House_F" && _veh in RPG_safehouses && player distance _veh < 5) then {
+            if (_veh isKindOf "House_F" && _veh in RPG_safehouses && player distance _veh < 10) then {
 				_house = cursorObject;
 				_locked = (_house getVariable ["bis_disabled_Door_1",1]);
                 if (_locked isEqualTo 1) then {
@@ -63,18 +63,22 @@ switch (_code) do {
 					_house setVariable ['bis_disabled_Door_1',1,true];
 					hint "House Locked";
 				};
+				_handled = true;
             };
 			if (_veh isKindOf "Land" || _veh isKindOf "Sea" || _veh isKindOf "Air") then {
 				_owner = (_veh getVariable ["RPG_owner",0]);
-				if ((getPlayerUID player) isEqualTo _owner && player distance _veh < 6) then {
-					_locked = locked _veh;
-					if (_locked isEqualTo 0) then {
-						_veh lock 2;
-						hint "Vehicle Locked";
-					};
-					if (_locked isEqualTo 2) then {
-						_veh lock 0;
-						hint "Vehicle Unlocked";
+				if ((getPlayerUID player) isEqualTo _owner) then {
+					if (vehicle player isEqualTo _veh || player distance _veh < 6) then {
+						_locked = locked _veh;
+						if (_locked isEqualTo 0) then {
+							_veh lock 2;
+							hint "Vehicle Locked";
+						};
+						if (_locked isEqualTo 2) then {
+							_veh lock 0;
+							hint "Vehicle Unlocked";
+						};
+						_handled = true;
 					};
 				};
 			};
